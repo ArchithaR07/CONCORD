@@ -1,0 +1,34 @@
+{
+  "$id": "obligation.schema.json",
+  "title": "Obligation",
+  "description": "Output of L1 EXTRACT / L2 LENS (owned by Person A1). Person A2's L3 FILTER consumes a list of these. Field names must not change without a heads-up to A1 and B per the work-split doc.",
+  "type": "object",
+  "required": ["id", "policy", "doc_id", "section", "raw_text", "action", "strength", "topic", "scope"],
+  "properties": {
+    "id": { "type": "string", "description": "Stable obligation id, e.g. obl_0042 (mapped from the dataset's obligation_id)" },
+    "doc_id": { "type": "string", "description": "Source document id (mapped from doc_id in policy_obligations.csv)" },
+    "policy": { "type": "string", "description": "Human-readable policy name" },
+    "section": { "type": "string" },
+    "obligation": { "type": ["string", "null"], "description": "Short normalized obligation label, if extracted" },
+    "action": { "type": "string", "enum": ["REQUIRE", "PROHIBIT", "RECOMMEND", "PERMIT"] },
+    "scope": {
+      "type": "object",
+      "required": ["department", "geography", "system_type", "raw_scope_text"],
+      "properties": {
+        "department": { "type": "array", "items": { "type": "string" } },
+        "geography": { "type": "array", "items": { "type": "string" } },
+        "system_type": { "type": "array", "items": { "type": "string" } },
+        "raw_scope_text": { "type": "string" }
+      }
+    },
+    "strength": { "type": "string", "enum": ["mandatory", "recommended", "optional"] },
+    "frequency": { "type": ["string", "null"], "description": "Normalized period, e.g. '90_days'" },
+    "period_hours": { "type": ["number", "null"], "description": "Frequency/period normalized to hours, for numeric comparison in L4/L7. A2 addition -- not in the original architecture doc but needed for deterministic conflict/decay checks." },
+    "topic": { "type": "string", "description": "Topic bucket used by L3's same-topic-bucket rule" },
+    "external_mandate": { "type": ["string", "null"] },
+    "raw_text": { "type": "string" },
+    "embedding": { "type": "array", "items": { "type": "number" } },
+    "last_reviewed": { "type": ["string", "null"], "format": "date" },
+    "revision_status": { "type": "string", "enum": ["dated", "updated_undated", "retired", "unknown"], "description": "A2 addition: coarse status parsed from the raw revision field, used by L7 DECAY." }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$id": "resolved_finding.schema.json",
+  "title": "ResolvedFinding",
+  "description": "Output of L6 ARBITRATE + PRECEDENCE (A2). Matches architecture doc \u00a76 'Finding object' shape. B (L11/L12/L13/L15/L16) builds against this file.",
+  "type": "object",
+  "required": ["finding_id", "finding_type", "trust_score", "confidence_tier", "verdict_source", "policy_a", "policy_b", "description"],
+  "properties": {
+    "finding_id": { "type": "string" },
+    "finding_type": { "type": "string", "enum": ["CONFLICT", "REDUNDANT", "COMPLEMENTARY"] },
+    "severity": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW", "N/A"] },
+    "trust_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "confidence_tier": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] },
+    "verdict_source": { "type": "array", "items": { "type": "string", "enum": ["rule_bench", "llm_bench"] } },
+    "is_keystone": { "type": ["boolean", "null"], "description": "null until L9 CENTRALITY back-fills it once keystone_score exists." },
+    "obligation_id_a": { "type": "string" },
+    "obligation_id_b": { "type": "string" },
+    "policy_a": { "type": "string" },
+    "policy_b": { "type": "string" },
+    "description": { "type": "string" },
+    "scope_analysis": { "type": "string" },
+    "precedence_resolution": {
+      "type": ["object", "null"],
+      "description": "Present only for finding_type=CONFLICT (architecture doc \u00a74.5).",
+      "properties": {
+        "resolution": { "type": "string" },
+        "reasoning_chain": { "type": "array", "items": { "type": "string" } },
+        "precedence_basis": { "type": "string", "enum": ["regulatory_override", "specificity", "recency", "authority", "unresolved"] }
+      }
+    },
+    "stale_flag": { "type": "boolean", "description": "A2 addition: whether either side of the pair is independently flagged stale by L7." },
+    "recommendation": { "type": "string" },
+    "compliance_impact": { "type": "array", "items": { "type": "string" }, "description": "Populated by B's L11 COMPASS; A2 ships an empty list here." }
+  }
+}

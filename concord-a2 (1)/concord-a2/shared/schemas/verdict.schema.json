@@ -1,0 +1,32 @@
+{
+  "$id": "verdict.schema.json",
+  "title": "Verdict",
+  "description": "Common shape emitted by BOTH Rule Bench (A2, L4-rule-bench) and LLM Bench (A1, L4-llm-bench). L5 TRUST RECONCILE (A1) consumes a merged list of these, keyed by pair_id and source.",
+  "type": "object",
+  "required": ["pair_id", "obligation_id_1", "obligation_id_2", "verdict", "confidence", "source"],
+  "properties": {
+    "pair_id": { "type": "string" },
+    "obligation_id_1": { "type": "string" },
+    "obligation_id_2": { "type": "string" },
+    "verdict": { "type": "string", "enum": ["CONFLICT", "REDUNDANT", "COMPLEMENTARY", "UNRELATED", "ESCALATE"] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1, "description": "For rule_bench: 1.0 if clear verdict, 0.5 if ESCALATE, 0.0 if no signal. For llm_bench: the model's self-reported confidence." },
+    "rule_signal": { "type": "number", "minimum": 0, "maximum": 1, "description": "Present when source=rule_bench. Same value as confidence, kept as its own field because L5's trust formula (architecture doc \u00a74.1) names it explicitly." },
+    "scope_analysis": { "type": "string" },
+    "explanation": { "type": "string" },
+    "recommendation": { "type": "string" },
+    "evidence": {
+      "type": "object",
+      "description": "A2 addition: the deterministic basis for the rule_bench verdict, so it's auditable.",
+      "properties": {
+        "text_similarity_ratio": { "type": ["number", "null"] },
+        "same_topic": { "type": "boolean" },
+        "action_pair": { "type": "array", "items": { "type": "string" } },
+        "period_1_hours": { "type": ["number", "null"] },
+        "period_2_hours": { "type": ["number", "null"] },
+        "scope_relation": { "type": "string", "enum": ["disjoint", "overlap", "subset_1_in_2", "subset_2_in_1", "equal", "unknown"] },
+        "rule_fired": { "type": "string", "description": "Name of the deterministic rule that produced this verdict, e.g. 'near_identical_text', 'contradictory_action_same_scope', 'differing_mandated_period'." }
+      }
+    },
+    "source": { "type": "string", "enum": ["rule_bench", "llm_bench"] }
+  }
+}
