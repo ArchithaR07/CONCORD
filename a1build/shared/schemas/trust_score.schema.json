@@ -1,0 +1,27 @@
+{
+  "$id": "trust_score.schema.json",
+  "description": "Output of L5 TRUST RECONCILE (A1's headline deliverable, trust_scores.json). A2's L6 (Arbitrate + Precedence) and L8 (Mesh, edge weights) consume this directly.",
+  "type": "object",
+  "required": ["obligation_a_id", "obligation_b_id", "policy_a", "policy_b", "topic",
+               "trust_score", "confidence_tier"],
+  "properties": {
+    "obligation_a_id": {"type": "string"},
+    "obligation_b_id": {"type": "string"},
+    "policy_a": {"type": "string"},
+    "policy_b": {"type": "string"},
+    "topic": {"type": "string"},
+    "rule_signal": {"type": "number"},
+    "embedding_similarity": {"type": "number"},
+    "llm_confidence": {"type": "number"},
+    "agreement_bonus": {"type": "number", "enum": [0.0, 1.0]},
+    "trust_score": {"type": "number", "minimum": 0, "maximum": 1,
+                     "description": "Calibrated probability from the fitted logistic regression (or documented fallback prior)."},
+    "confidence_tier": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
+    "rule_verdict": {"type": ["string", "null"]},
+    "llm_verdict": {"type": ["string", "null"]},
+    "is_finding": {"type": "integer", "enum": [0, 1],
+                    "description": "Ground-truth label used during training only, kept for audit trail. Not meaningful at inference time on unlabeled real data."},
+    "label_source": {"type": "string",
+                      "description": "Which findings_labels.csv subtype (or 'unmatched_implicit_negative') produced this pair's training label."}
+  }
+}

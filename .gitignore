@@ -1,0 +1,13 @@
+# Virtual Environment
+a1build/venv/
+
+# Environment Variables / Keys
+a1build/.env
+
+# Python Cache
+**/__pycache__/
+*.pyc
+
+# Local IDEs
+.vscode/
+.idea/
