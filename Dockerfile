@@ -16,11 +16,13 @@ COPY concord-frontend/patches /app/concord-frontend/patches/
 
 WORKDIR /app/concord-frontend
 RUN pnpm install
-RUN pnpm run build
-
 # Copy the rest of the workspace
 WORKDIR /app
 COPY . /app/
+
+# Now build the frontend
+WORKDIR /app/concord-frontend
+RUN pnpm run build
 
 # Set working directory to frontend to run the Express server
 WORKDIR /app/concord-frontend
