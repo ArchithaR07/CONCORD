@@ -12,9 +12,11 @@ RUN pip install --no-cache-dir -r /app/a1build/requirements.txt
 # Install Node.js dependencies
 COPY concord-frontend/package.json /app/concord-frontend/
 COPY concord-frontend/pnpm-lock.yaml /app/concord-frontend/
+COPY concord-frontend/patches /app/concord-frontend/patches/
 
 WORKDIR /app/concord-frontend
 RUN pnpm install
+RUN pnpm run build
 
 # Copy the rest of the workspace
 WORKDIR /app
