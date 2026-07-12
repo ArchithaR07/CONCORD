@@ -1,0 +1,7 @@
+node_modules
+a1build/venv
+.git
+__pycache__
+concord-frontend/dist
+.env
+concord-a2 (1)

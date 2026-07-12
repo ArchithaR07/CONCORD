@@ -84,7 +84,8 @@ async function startServer() {
       console.log("Files uploaded. Triggering unified CONCORD pipeline...");
       const a1Dir = path.resolve(__dirname, "..", "..", "a1build");
       // Run unified pipeline (L0 through L16)
-      await runCommand(`venv\\Scripts\\python run_pipeline.py`, a1Dir);
+      const pythonCmd = process.env.NODE_ENV === "production" ? "python3 run_pipeline.py" : "venv\\Scripts\\python run_pipeline.py";
+      await runCommand(pythonCmd, a1Dir);
       console.log("Unified pipeline completed successfully.");
       res.json({ message: "Unified pipeline executed successfully" });
     } catch (err: any) {
