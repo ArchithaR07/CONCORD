@@ -27,12 +27,5 @@ RUN pnpm run build
 # Set working directory to frontend to run the Express server
 WORKDIR /app/concord-frontend
 
-# The Express server is written in TypeScript, so we need ts-node installed globally to run it directly
-RUN npm install -g ts-node typescript
-
-EXPOSE 5000
-ENV NODE_ENV=production
-ENV PORT=5000
-
 # Run the express server
-CMD ["npx", "ts-node", "server/index.ts"]
+CMD ["pnpm", "run", "start"]
