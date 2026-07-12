@@ -14,7 +14,7 @@ COPY concord-frontend/package.json /app/concord-frontend/
 COPY concord-frontend/pnpm-lock.yaml /app/concord-frontend/
 
 WORKDIR /app/concord-frontend
-RUN npm install -g pnpm && pnpm install
+RUN pnpm install
 
 # Copy the rest of the workspace
 WORKDIR /app
