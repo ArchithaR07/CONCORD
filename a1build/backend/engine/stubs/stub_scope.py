@@ -1,13 +1,4 @@
-"""
-STUB for A1's L1 structured scope extraction (architecture doc \u00a74.6).
 
-The real pipeline gets {department, geography, system_type} from an LLM
-extraction pass. Until A1 ships that, A2 needs *something* schema-shaped
-to make L6's specificity check (subset-of comparison) and L10's
-department-grouped policy debt score runnable today. This is a keyword
-heuristic over policy_name + obligation_text -- intentionally simple,
-intentionally replaceable. See README "Handing off to A1" section.
-"""
 import re
 
 DEPARTMENT_KEYWORDS = {
@@ -80,12 +71,7 @@ def extract_external_mandate(obligation_text):
 
 
 def scope_relation(scope_a, scope_b):
-    """
-    Deterministic set-comparison used by L6's specificity check (\u00a74.5).
-    A "dimension" (department/geography/system_type) counts as a match if
-    either side is ["all"]/["global"] (wildcard) or the sets intersect.
-    Returns one of: disjoint, overlap, subset_1_in_2, subset_2_in_1, equal.
-    """
+    
     def _norm(vals):
         return set(v for v in vals if v not in ("all", "global")) 
 
@@ -101,10 +87,10 @@ def scope_relation(scope_a, scope_b):
     }
 
     def _dim_relation(a, b):
-        # empty set == wildcard ("all"/"global")
+        
         if not a and not b:
             return "equal"
-        if not a:  # a is wildcard, b is specific -> b subset of a
+        if not a:  
             return "b_narrower"
         if not b:
             return "a_narrower"
@@ -125,7 +111,7 @@ def scope_relation(scope_a, scope_b):
     if all(r == "equal" for r in rels):
         return "equal"
     if all(r in ("equal", "a_narrower") for r in rels) and "a_narrower" in rels:
-        return "subset_1_in_2"  # A is the narrower/more specific side
+        return "subset_1_in_2"  
     if all(r in ("equal", "b_narrower") for r in rels) and "b_narrower" in rels:
-        return "subset_2_in_1"  # B is the narrower/more specific side
+        return "subset_2_in_1"  
     return "overlap"

@@ -33,24 +33,23 @@ def embed_mitigations(mitigations):
     # Try to import sentence_transformers safely
     try:
         from sentence_transformers import SentenceTransformer
-    except ImportError:
-        print("sentence-transformers not installed.")
-        return {}
-
-    model = SentenceTransformer("all-MiniLM-L6-v2")
-    mitigation_ids = list(mitigations.keys())
-    texts = [m.get("description", "") or m.get("name", "") for m in mitigation_ids for m in [mitigations[m]]]
-    
-    print(f"Embedding {len(texts)} MITRE mitigations...")
-    embeddings = model.encode(texts, show_progress_bar=False)
-    
-    for i, mid in enumerate(mitigation_ids):
-        mitigations[mid]["embedding"] = embeddings[i].tolist()
+        model = SentenceTransformer("all-MiniLM-L6-v2")
+        mitigation_ids = list(mitigations.keys())
+        texts = [m.get("description", "") or m.get("name", "") for m in mitigation_ids for m in [mitigations[m]]]
         
-    return mitigation_ids, embeddings
+        print(f"Embedding {len(texts)} MITRE mitigations...")
+        embeddings = model.encode(texts, show_progress_bar=False)
+        
+        for i, mid in enumerate(mitigation_ids):
+            mitigations[mid]["embedding"] = embeddings[i].tolist()
+            
+        return mitigation_ids, embeddings
+    except ImportError:
+        print("sentence-transformers not installed. Returning None for TF-IDF fallback.")
+        return None, None
 
 def get_candidates(obligation_emb, mitigation_embeddings, mitigation_ids, top_k=3, threshold=0.35):
-    if not obligation_emb or len(mitigation_embeddings) == 0:
+    if obligation_emb is None or len(mitigation_embeddings) == 0:
         return []
     
     obl_emb = np.array(obligation_emb)
@@ -112,7 +111,7 @@ def run():
     if not mitigations:
         return []
         
-    mitigation_ids, mitigation_embeddings = embed_mitigations(mitigations)
+    res = embed_mitigations(mitigations)
     
     obligations_path = config.OUTPUTS_DIR / "obligations_embedded.json"
     if not obligations_path.exists():
@@ -120,6 +119,28 @@ def run():
         return []
         
     obligations = json.loads(obligations_path.read_text(encoding="utf-8"))
+    
+    if res == (None, None) or res is None or not isinstance(res, tuple):
+        print("[L15 CRUCIBLE] Falling back to TF-IDF embeddings.")
+        from sklearn.feature_extraction.text import TfidfVectorizer
+        mitigation_ids = list(mitigations.keys())
+        mit_texts = [m.get("description", "") or m.get("name", "") for m in mitigation_ids for m in [mitigations[m]]]
+        obl_texts = [o["raw_text"] for o in obligations]
+        
+        vectorizer = TfidfVectorizer(stop_words="english")
+        vectorizer.fit(mit_texts + obl_texts)
+        
+        mitigation_embeddings = vectorizer.transform(mit_texts).toarray()
+        obl_embeddings = vectorizer.transform(obl_texts).toarray()
+        
+        for i, mid in enumerate(mitigation_ids):
+            mitigations[mid]["embedding"] = mitigation_embeddings[i].tolist()
+            
+        for i, o in enumerate(obligations):
+            o["embedding"] = obl_embeddings[i].tolist()
+    else:
+        mitigation_ids, mitigation_embeddings = res
+        
     llm_client = get_llm_client()
     
     # We will limit to 50 obligations to avoid rate limits during dev

@@ -1,11 +1,4 @@
-"""
-STUB for A1's L2 LENS topic tagging.
 
-The dataset's own `topic_tags` column is only populated for ~6% of rows
-(98/1585) -- everywhere else this keyword fallback assigns a bucket so
-L3 FILTER's "same topic bucket" rule has something to group on. Replace
-with A1's real TF-IDF/embedding-cluster topic tagging when it ships.
-"""
 TOPIC_KEYWORDS = {
     "password": ["password"],
     "encryption": ["encrypt", "cryptograph", "key rotation", "cipher"],
@@ -27,7 +20,7 @@ TOPIC_KEYWORDS = {
 
 def assign_topic(obligation_text, topic_tags_field=None):
     if topic_tags_field and isinstance(topic_tags_field, str) and topic_tags_field.strip():
-        # dataset sometimes has multiple tags separated by ';' -- take the first
+        
         return topic_tags_field.split(";")[0].strip()
     low = obligation_text.lower()
     for topic, keywords in TOPIC_KEYWORDS.items():

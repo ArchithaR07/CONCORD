@@ -52,12 +52,11 @@ function PipelineStatus({ stages }: { stages: PipelineStage[] }) {
       <div className="flex flex-wrap gap-2">
         {stages.map((stage, i) => (
           <div key={stage.id} className="flex items-center gap-1.5">
-            <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold border transition-all ${
-              stage.status === "done" ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-500"
+            <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold border transition-all ${stage.status === "done" ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-500"
               : stage.status === "running" ? "bg-cyan-500/10 border-cyan-500/30 text-cyan-400 animate-pulse"
-              : stage.status === "error" ? "bg-red-500/10 border-red-500/30 text-red-400"
-              : "bg-muted border-border text-muted-foreground"
-            }`}>
+                : stage.status === "error" ? "bg-red-500/10 border-red-500/30 text-red-400"
+                  : "bg-muted border-border text-muted-foreground"
+              }`}>
               {stage.status === "done" && <CheckCircle2 className="w-3 h-3" />}
               {stage.status === "running" && <div className="w-3 h-3 rounded-full border-2 border-cyan-400 border-t-transparent animate-spin" />}
               {stage.status === "error" && <X className="w-3 h-3" />}
@@ -224,9 +223,8 @@ export function IngestTab({ apiObligations, isLoading, fetchError, onFetchRetry,
             onDragLeave={() => setIsDragging(false)}
             onDrop={(e) => { e.preventDefault(); setIsDragging(false); processUpload(Array.from(e.dataTransfer.files)); }}
             onClick={() => document.getElementById("file-upload-ingest")?.click()}
-            className={`border border-dashed rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-all ${
-              isDragging ? "border-cyan-400 bg-cyan-500/5 shadow-[0_0_25px_rgba(0,242,254,0.1)]" : "border-border hover:border-primary/60 hover:bg-muted/30"
-            }`}
+            className={`border border-dashed rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-all ${isDragging ? "border-cyan-400 bg-cyan-500/5 shadow-[0_0_25px_rgba(0,242,254,0.1)]" : "border-border hover:border-primary/60 hover:bg-muted/30"
+              }`}
           >
             <input type="file" id="file-upload-ingest" multiple className="hidden" onChange={(e) => { if (e.target.files) processUpload(Array.from(e.target.files)); }} />
             <FileText className="w-10 h-10 text-slate-500 mb-2 animate-bounce" />
@@ -291,7 +289,7 @@ export function IngestTab({ apiObligations, isLoading, fetchError, onFetchRetry,
           </div>
         </div>
 
-        <div className="space-y-3 max-h-[320px] overflow-y-auto pr-2">
+        <div className="space-y-3 h-[650px] overflow-y-auto pr-2">
           {isLoading ? (
             <SkeletonCard lines={4} />
           ) : fetchError ? (

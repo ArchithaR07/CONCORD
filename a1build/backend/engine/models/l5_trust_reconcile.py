@@ -15,10 +15,10 @@ FEATURE_NAMES = ["rule_signal", "embedding_similarity", "llm_confidence", "agree
 
 POSITIVE_SUBTYPES = {"DIRECT_CONFLICT", "PARTIAL_CONFLICT", "REDUNDANCY"}
 HARD_NEGATIVE_SUBTYPES = {"FALSE_POSITIVE_PRONE"}
-PAIRWISE_FINDING_TYPES = {"CONFLICT", "REDUNDANCY"}  # STALE is single-policy, excluded
+PAIRWISE_FINDING_TYPES = {"CONFLICT", "REDUNDANCY"}  
 
 TOPIC_FROM_DESC_RE = re.compile(r"\bon ([a-zA-Z][a-zA-Z\- ]*)\.?\s*$")
-#Ground-truth label extraction from findings_labels.csv
+
 def _extract_topic(row: pd.Series) -> str | None:
     for field in ("description", "explanation"):
         text = row.get(field)
@@ -36,7 +36,7 @@ def load_ground_truth_labels(findings_csv: Path = config.FINDINGS_LABELS_CSV) ->
     records = []
     for _, row in df.iterrows():
         if pd.isna(row.get("policy_a")) or pd.isna(row.get("policy_b")):
-            continue  # not actually a pairwise row despite the finding_type
+            continue  
         pair = frozenset({row["policy_a"], row["policy_b"]})
         subtype = row["finding_subtype"]
         is_finding = 1 if subtype in POSITIVE_SUBTYPES else 0
@@ -101,8 +101,7 @@ def build_feature_table(candidate_pairs: list, rule_verdicts: list, llm_verdicts
 
 
 def attach_labels(feature_df: pd.DataFrame, ground_truth: list) -> pd.DataFrame:
-    """Vectorized replacement for the old iterrows loop.
-    Runs in O(n log n) via pandas merge instead of O(n * m) Python loops."""
+    
     if not ground_truth:
         feature_df = feature_df.copy()
         feature_df["is_finding"] = 0

@@ -1,17 +1,4 @@
-"""
-L9 -- CENTRALITY (Person A2). Architecture doc \u00a74.2 -- Differentiator #2.
 
-Input : the networkx.Graph built by L8 MESH
-Output: keystone_score per node (continuous, already in [0,1]) + a
-        boolean is_keystone convenience flag (top KEYSTONE_TOP_PCT of
-        nonzero scores) + graph_export.json (graph_export.schema.json)
-
-keystone_score(node) = 0.5 * betweenness_centrality(node) + 0.5 * degree_centrality(node)
-
-This is the exact formula from \u00a74.2 of the architecture doc -- betweenness
-weighted by trust_score so a high-confidence conflict counts for more than
-a shaky escalated one, degree unweighted (pure connectivity count).
-"""
 import numpy as np
 import networkx as nx
 
@@ -79,9 +66,7 @@ def enrich_findings_with_keystone(resolved_findings, is_keystone):
 
 
 def one_hop_impact(G, obligation_id):
-    """Policy change impact analysis (\u00a74.2's stated payoff): 1-hop neighbors
-    sorted by edge trust_score are "immediately impacted"; 2-hop are
-    "secondary impact". A direct graph traversal, no pipeline re-run."""
+    
     if obligation_id not in G:
         return {"immediate": [], "secondary": []}
     immediate = sorted(

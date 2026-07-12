@@ -1,38 +1,4 @@
-"""
-L10 -- SCORE (Person A2). Architecture doc section 4.3 + section 12.2 (policy debt).
 
-Input : resolved_findings.json (L6, with stale_flag merged in from L7) +
-        graph_export.json's keystone_score (L9) + obligations.json (for
-        structured scope -> department grouping)
-Output: scores.json  {per_policy, org_wide, policy_debt_by_department,
-                       sensitivity_check}
-
-    per_policy_score = 100 - Sum(finding_penalty x keystone_multiplier) - stale_penalty
-    keystone_multiplier(node) = 1 + alpha * keystone_score(node), default alpha = 1.0
-    org_wide_score = weighted average of per_policy_score, weighted by obligation count
-
-TWO DESIGN DECISIONS DOCUMENTED EXPLICITLY (rather than silently baked in),
-found during self-eval against this dataset (see README "Self-eval" section):
-
-1. REDUNDANCY IS CLUSTERED, NOT COUNTED PAIRWISE. A boilerplate clause
-   duplicated near-verbatim across N policy documents produces C(N,2)
-   pairwise REDUNDANT findings (this corpus has a clause repeated across
-   46 SANS templates -> 1,035 pairwise findings from ONE underlying
-   duplication). Penalizing every policy 5 points per *pairwise* finding
-   collapses every score to 0 and says nothing useful -- "this clause is
-   duplicated 46 times" is one fact, not 1,035. So REDUNDANT findings are
-   first grouped into connected components (a "redundancy cluster"); each
-   policy is penalized once per *cluster* it participates in, not once
-   per pairwise edge. CONFLICT findings are NOT clustered -- each is a
-   distinct disagreement between two specific clauses and stays pairwise.
-
-2. The stale-flag "+5" row in section 4.3's finding_penalty table is applied to
-   CONFLICT findings (keystone-weighted, inside the sum) but not folded
-   into the per-cluster REDUNDANT penalty (clustering already collapses
-   the pairwise structure that "+5 per stale finding" assumed). Obligations
-   that are stale but touch no finding at all still cost the policy via
-   the separate, un-keystone-weighted "standalone_stale_penalty" term.
-"""
 from collections import defaultdict
 
 from backend.engine.models import config
@@ -56,7 +22,7 @@ class _UnionFind:
 
 
 def _redundancy_clusters(resolved_findings):
-    """obligation_id -> cluster_id, for obligations touching >=1 REDUNDANT finding."""
+    
     uf = _UnionFind()
     for f in resolved_findings:
         if f["finding_type"] == "REDUNDANT":

@@ -1,21 +1,4 @@
-"""
-L7 -- DECAY (Person A2). Architecture doc \u00a73/\u00a713.
 
-Input : obligations.json (must carry last_reviewed / revision_status, set
-        during L0 INGEST's metadata parsing)
-Output: staleness.json           -- per-obligation staleness
-        staleness_by_document.json -- per-document rollup, same shape as
-                                       the challenge's own staleness.csv,
-                                       so it's directly diffable (see
-                                       scripts/validate_against_ground_truth.py)
-
-Three independent signals, exactly as scoped to A2 in the architecture doc:
-  1. date math            -- age_years vs. STALE_AGE_YEARS_THRESHOLD
-  2. deprecated-tech dict -- flags obsolete tech regardless of date
-  3. supersession language -- flagged, not auto-resolved (that LLM fallback
-     is A1's territory once LLM Bench exists; here it's surfaced for
-     manual review, never silently resolved)
-"""
 from collections import Counter, defaultdict
 from datetime import date, datetime
 
@@ -55,8 +38,8 @@ def compute_obligation_staleness(obligation, today=None):
     else:
         staleness_status, stale, age_years = "UNKNOWN_NO_REVISION_DATE", None, None
 
-    # Deprecated terminology overrides to stale=True regardless of date math --
-    # obsolete tech references are stale on their face.
+    
+    
     if deprecated and not stale:
         stale = True
         if staleness_status in ("CURRENT",):
@@ -72,7 +55,7 @@ def compute_obligation_staleness(obligation, today=None):
         "deprecated_terms_found": deprecated,
         "supersession_language_detected": bool(supersession),
         "supersession_phrases": supersession,
-        "needs_manual_review": bool(supersession),  # LLM fallback not wired in -- surfaced, not auto-resolved
+        "needs_manual_review": bool(supersession),  
     }
 
 
@@ -81,7 +64,7 @@ def run_decay(obligations, today=None):
 
 
 def rollup_by_document(obligation_staleness, obligations_by_id):
-    """Per-document view, same shape family as the provided staleness.csv."""
+    
     by_doc = defaultdict(list)
     for s in obligation_staleness:
         by_doc[s["policy_file"]].append(s)
@@ -89,8 +72,8 @@ def rollup_by_document(obligation_staleness, obligations_by_id):
     rows = []
     for doc_id, entries in by_doc.items():
         statuses = Counter(e["staleness_status"] for e in entries)
-        # a document is RETIRED if any obligation says so; else STALE if the
-        # majority of dated obligations are stale; else take the modal status
+        
+        
         if statuses["RETIRED"] > 0:
             doc_status = "RETIRED"
         elif statuses["STALE"] > 0:

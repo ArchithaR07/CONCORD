@@ -1,8 +1,4 @@
-"""Small shared IO helpers. Every layer reads/writes JSON files under outputs/
-so A1 and B never need to import A2's Python code directly -- the JSON files
-ARE the interface, per the work-split doc's "everyone builds to/from JSON
-files, not to each other's code."
-"""
+
 import json
 from datetime import datetime, timezone
 from pathlib import Path

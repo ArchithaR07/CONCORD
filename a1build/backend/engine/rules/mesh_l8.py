@@ -1,18 +1,4 @@
-"""
-L8 -- MESH (Person A2).
 
-Input : resolved_findings.json (L6) + obligations.json
-Output: a live networkx.Graph (L9 CENTRALITY consumes it directly; the
-        JSON export happens after L9 adds keystone_score, see
-        centrality_l9.export_graph)
-
-Nodes = obligations that appear in at least one finding (isolated
-obligations with no findings have degree 0 / betweenness 0 by
-definition, so they're excluded rather than cluttering the graph with
-meaningless singleton nodes).
-Edges = findings, weighted by trust_score (conflict/redundancy relations
-are symmetric, hence an undirected graph).
-"""
 import networkx as nx
 
 

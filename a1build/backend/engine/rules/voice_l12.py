@@ -1,14 +1,11 @@
 def apply_voice_explanations(mapped_findings):
-    """
-    L12 VOICE - Generates a 2-sentence explanation and a 1-sentence harmonization recommendation.
-    For this build, we use a deterministic grounded explanation based on the finding fields.
-    """
+    
     for finding in mapped_findings:
         finding_type = finding.get("finding_type", "UNKNOWN")
         policy_a = finding.get("policy_a", "Policy A")
         policy_b = finding.get("policy_b", "Policy B")
         
-        # 2-sentence explanation
+        
         if finding_type == "CONFLICT":
             explanation = f"There is a direct contradiction between {policy_a} and {policy_b} regarding their required actions. The precedence rules indicate that one policy must override the other in overlapping scopes."
             recommendation = f"Update the broader policy to explicitly carve out an exception for the scope governed by the narrower policy."
@@ -19,9 +16,9 @@ def apply_voice_explanations(mapped_findings):
             explanation = f"An ambiguity exists between {policy_a} and {policy_b} that requires manual review. The specific interaction could not be automatically resolved as a strict conflict or redundancy."
             recommendation = "Review the clauses manually to determine if a harmonization update is required."
             
-        # Draft-and-propose structure
+        
         finding["voice_explanation"] = explanation
         finding["voice_recommendation"] = recommendation
-        finding["draft_status"] = "pending_approval" # For the UI Approve/Reject feature
+        finding["draft_status"] = "pending_approval" 
         
     return mapped_findings

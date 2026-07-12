@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from backend.engine.models import (  # noqa: E402
+from backend.engine.models import (  
     l0_ingest, l1_extract, l2_lens,
     l3_candidates_stub, rule_bench_stub, l4_llm_bench,
     l5_trust_reconcile, config,

@@ -3,11 +3,11 @@ import re
 from typing import Optional
 
 from . import config
-from .l4_llm_bench import get_llm_client  # shared LLM plumbing (mock/gemini/groq)
+from .l4_llm_bench import get_llm_client  
 
-# ---------------------------------------------------------------------
-# Strength / action normalization
-# ---------------------------------------------------------------------
+
+
+
 STRENGTH_TO_ACTION = {
     "must": ("mandatory", "REQUIRE"),
     "shall": ("mandatory", "REQUIRE"),
@@ -88,8 +88,7 @@ def _normalize_topic(raw_topic: str) -> str:
 
 
 def _rule_extract_clause(clause_text: str) -> Optional[dict]:
-    """Pass 1: deterministic regex extraction. Returns None if the clause
-    carries no detectable obligation (preamble/definition-like text)."""
+    
     text = clause_text.strip()
 
     m = PATTERN_A.match(text) or PATTERN_B.match(text)
@@ -138,7 +137,7 @@ def _rule_extract_clause(clause_text: str) -> Optional[dict]:
 def _spacy_topic_crosscheck(clause_text: str) -> Optional[str]:
     
     try:
-        # pyrefly: ignore [missing-import]
+        
         import spacy
         if not hasattr(_spacy_topic_crosscheck, "_nlp"):
             _spacy_topic_crosscheck._nlp = spacy.load("en_core_web_sm")
@@ -163,24 +162,24 @@ Section: {section_id}
 Policy: {policy_name} (last reviewed: {last_reviewed})
 
 If the clause contains no enforceable obligation (preamble, definition, etc.),
-return {{"obligation": null}}.
+return {{"obligation": null}} .
 
 Return ONLY valid JSON, no markdown fences, no preamble:
-{{
+{{ 
   "obligation": string | null,
   "action": "REQUIRE" | "PROHIBIT" | "RECOMMEND" | "PERMIT",
-  "scope": {{
+  "scope": {{ 
     "department": [string],
     "geography": [string],
     "system_type": [string],
     "raw_scope_text": string
-  }},
+  }} ,
   "strength": "mandatory" | "recommended" | "optional",
   "frequency": string | null,
   "topic": string,
   "external_mandate": string | null,
   "confidence": float
-}}"""
+}} """
     raw = llm_client.complete_json(prompt)
     if not raw or raw.get("obligation") is None:
         return None

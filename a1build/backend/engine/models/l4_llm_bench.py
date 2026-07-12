@@ -34,7 +34,7 @@ def _strip_code_fences(text: str) -> str:
     text = re.sub(r"^```(json)?", "", text).strip()
     text = re.sub(r"```$", "", text).strip()
     return text
-# LLM clients
+
 class MockLLMClient:
     def complete_json(self, prompt: str) -> Optional[dict]:
         if "Obligation A:" in prompt and "Obligation B:" in prompt:
@@ -88,10 +88,7 @@ class MockLLMClient:
 
 
 class GeminiLLMClient:
-    """Real Gemini calls. Default model: gemini-1.5-flash (1,500 req/day free).
-    Rate-limited to 0.5s between calls to stay under the 60 RPM cap.
-    Once the daily quota is hit, fails instantly for all remaining calls
-    so the cascade falls through to Groq/mock without waiting."""
+    
 
     _quota_exhausted = False
 
@@ -162,7 +159,7 @@ class HuggingFaceLLMClient:
                 return_full_text=False,
             )
             return json.loads(_strip_code_fences(resp))
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:  
             exc_str = str(exc).lower()
             if isinstance(exc, ValueError) or "rate" in exc_str or "unauthorized" in exc_str or "token" in exc_str or "support" in exc_str:
                 HuggingFaceLLMClient._quota_exhausted = True
@@ -218,7 +215,7 @@ def get_llm_client():
     if provider not in ("mock",):
         print(f"[LLM] LLM_PROVIDER={provider} but no API key set — falling back to mock.")
     return MockLLMClient()
-#L4 pair classification
+
 def classify_pair(obligation_a: dict, obligation_b: dict, llm_client=None) -> dict:
     llm_client = llm_client or get_llm_client()
     prompt = ARBITRATION_PROMPT_TEMPLATE.format(
