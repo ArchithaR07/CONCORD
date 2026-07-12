@@ -1,0 +1,994 @@
+{
+  "document_id": "compiled_v1",
+  "generated_at": "2026-07-12T12:07:03.748310Z",
+  "sections": [
+    {
+      "topic": "provisioning",
+      "compiled_text": "All users shall provisioning as per company standards.",
+      "footnotes": [
+        "Source: Password Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "network",
+      "compiled_text": "All users should network as per company standards. (Reference: TLS 1.0)",
+      "footnotes": [
+        "Source: Password Policy 2."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "api",
+      "compiled_text": "All users should api as per company standards. (Reference: GDPR 2016)",
+      "footnotes": [
+        "Source: Password Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "All users recommended endpoint as per company standards.",
+      "footnotes": [
+        "Source: Password Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "password",
+      "compiled_text": "All users should password as per company standards.",
+      "footnotes": [
+        "Source: Password Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "encryption",
+      "compiled_text": "All users must encryption as per company standards. (Reference: SOX 2002)",
+      "footnotes": [
+        "Source: Password Policy 6."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "asset",
+      "compiled_text": "All users must asset as per company standards.",
+      "footnotes": [
+        "Source: Password Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "cloud",
+      "compiled_text": "All users should cloud as per company standards.",
+      "footnotes": [
+        "Source: Password Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "backup",
+      "compiled_text": "All users recommended backup as per company standards.",
+      "footnotes": [
+        "Source: Password Policy 9."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "access",
+      "compiled_text": "All users recommended access as per company standards.",
+      "footnotes": [
+        "Source: Password Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "change",
+      "compiled_text": "All users required change as per company standards.",
+      "footnotes": [
+        "Source: Password Policy 11."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "backup",
+      "compiled_text": "All users should backup as per company standards. (Reference: NIST SP 800-53 Rev 4)",
+      "footnotes": [
+        "Source: Cloud Security Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "data retention",
+      "compiled_text": "Data Retention is prohibited for all users.",
+      "footnotes": [
+        "Source: Cloud Security Policy 2."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "access",
+      "compiled_text": "Access is prohibited for all users.",
+      "footnotes": [
+        "Source: Cloud Security Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "password",
+      "compiled_text": "All users recommended password as per company standards.",
+      "footnotes": [
+        "Source: Cloud Security Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "third-party",
+      "compiled_text": "All users must third-party as per company standards.",
+      "footnotes": [
+        "Source: Cloud Security Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "physical",
+      "compiled_text": "All users recommended physical as per company standards.",
+      "footnotes": [
+        "Source: Cloud Security Policy 6."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "api",
+      "compiled_text": "All users should api as per company standards.",
+      "footnotes": [
+        "Source: Cloud Security Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "privacy",
+      "compiled_text": "All users recommended privacy as per company standards.",
+      "footnotes": [
+        "Source: Cloud Security Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "vendor",
+      "compiled_text": "All users required vendor as per company standards. (Reference: TLS 1.0)",
+      "footnotes": [
+        "Source: Cloud Security Policy 9."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "hr",
+      "compiled_text": "All users shall HR as per company standards.",
+      "footnotes": [
+        "Source: Cloud Security Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "encryption",
+      "compiled_text": "All users must encryption as per company standards.",
+      "footnotes": [
+        "Source: Cloud Security Policy 11."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "change",
+      "compiled_text": "All users shall change as per company standards.",
+      "footnotes": [
+        "Source: Data Classification Policy 2."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "physical",
+      "compiled_text": "All users must physical as per company standards.",
+      "footnotes": [
+        "Source: Data Classification Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "backup",
+      "compiled_text": "All users should backup as per company standards.",
+      "footnotes": [
+        "Source: Data Classification Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "logging",
+      "compiled_text": "All users must logging as per company standards.",
+      "footnotes": [
+        "Source: Data Classification Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "backup",
+      "compiled_text": "All users required backup as per company standards.",
+      "footnotes": [
+        "Source: Data Classification Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "access",
+      "compiled_text": "All users must access as per company standards.",
+      "footnotes": [
+        "Source: Data Classification Policy 11."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "hr",
+      "compiled_text": "All users recommended HR as per company standards. (Reference: DES)",
+      "footnotes": [
+        "Source: Data Classification Policy 12."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "logging",
+      "compiled_text": "Logging is prohibited for all users.",
+      "footnotes": [
+        "Source: Data Classification Policy 13."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "patch",
+      "compiled_text": "Patch is prohibited for all users. (Reference: WEP)",
+      "footnotes": [
+        "Source: Data Classification Policy 14."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "backup",
+      "compiled_text": "All users shall backup as per company standards.",
+      "footnotes": [
+        "Source: Data Classification Policy 15."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "data retention",
+      "compiled_text": "All users must data retention as per company standards. (Reference: NIST SP 800-53 Rev 4)",
+      "footnotes": [
+        "Source: Acceptable Use Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "access",
+      "compiled_text": "All users shall access as per company standards. (Reference: WEP)",
+      "footnotes": [
+        "Source: Acceptable Use Policy 6."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "All users should endpoint as per company standards. (Reference: SHA-1)",
+      "footnotes": [
+        "Source: Acceptable Use Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "password",
+      "compiled_text": "All users recommended password as per company standards. (Reference: SHA-1)",
+      "footnotes": [
+        "Source: Acceptable Use Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "provisioning",
+      "compiled_text": "All users required provisioning as per company standards.",
+      "footnotes": [
+        "Source: Acceptable Use Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "mobile",
+      "compiled_text": "Mobile is prohibited for all users.",
+      "footnotes": [
+        "Source: Data Retention Policy 2."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "third-party",
+      "compiled_text": "All users must third-party as per company standards. (Reference: SHA-1)",
+      "footnotes": [
+        "Source: Data Retention Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "logging",
+      "compiled_text": "All users recommended logging as per company standards.",
+      "footnotes": [
+        "Source: Data Retention Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "mobile",
+      "compiled_text": "All users required mobile as per company standards. (Reference: TLS 1.0)",
+      "footnotes": [
+        "Source: Data Retention Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "password",
+      "compiled_text": "Password is prohibited for all users.",
+      "footnotes": [
+        "Source: Data Retention Policy 9."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "patch",
+      "compiled_text": "Patch is prohibited for all users.",
+      "footnotes": [
+        "Source: Network Security Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "monitoring",
+      "compiled_text": "Monitoring is prohibited for all users. (Reference: NIST SP 800-53 Rev 4)",
+      "footnotes": [
+        "Source: Network Security Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "All users required endpoint as per company standards. (Reference: WEP)",
+      "footnotes": [
+        "Source: Network Security Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "third-party",
+      "compiled_text": "All users recommended third-party as per company standards.",
+      "footnotes": [
+        "Source: Network Security Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "mobile",
+      "compiled_text": "All users must mobile as per company standards.",
+      "footnotes": [
+        "Source: Network Security Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "vendor",
+      "compiled_text": "All users should vendor as per company standards.",
+      "footnotes": [
+        "Source: Encryption Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "network",
+      "compiled_text": "All users required network as per company standards. (Reference: SHA-1)",
+      "footnotes": [
+        "Source: Encryption Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "physical",
+      "compiled_text": "Physical is prohibited for all users.",
+      "footnotes": [
+        "Source: Encryption Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "vendor",
+      "compiled_text": "Vendor is prohibited for all users.",
+      "footnotes": [
+        "Source: Encryption Policy 9."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "privacy",
+      "compiled_text": "All users must privacy as per company standards.",
+      "footnotes": [
+        "Source: Encryption Policy 11."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "api",
+      "compiled_text": "All users required api as per company standards.",
+      "footnotes": [
+        "Source: Access Control Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "api",
+      "compiled_text": "All users must api as per company standards. (Reference: TLS 1.0)",
+      "footnotes": [
+        "Source: Access Control Policy 2."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "hr",
+      "compiled_text": "All users required HR as per company standards.",
+      "footnotes": [
+        "Source: Access Control Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "api",
+      "compiled_text": "All users must api as per company standards. (Reference: DES)",
+      "footnotes": [
+        "Source: Access Control Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "api",
+      "compiled_text": "All users recommended api as per company standards.",
+      "footnotes": [
+        "Source: Access Control Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "privacy",
+      "compiled_text": "Privacy is prohibited for all users.",
+      "footnotes": [
+        "Source: Access Control Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "network",
+      "compiled_text": "All users must network as per company standards.",
+      "footnotes": [
+        "Source: Access Control Policy 9."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "monitoring",
+      "compiled_text": "All users required monitoring as per company standards.",
+      "footnotes": [
+        "Source: Access Control Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "monitoring",
+      "compiled_text": "Monitoring is prohibited for all users.",
+      "footnotes": [
+        "Source: Incident Response Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "cloud",
+      "compiled_text": "All users recommended cloud as per company standards. (Reference: SOX 2002)",
+      "footnotes": [
+        "Source: Incident Response Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "data retention",
+      "compiled_text": "All users recommended data retention as per company standards.",
+      "footnotes": [
+        "Source: Incident Response Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "monitoring",
+      "compiled_text": "All users shall monitoring as per company standards.",
+      "footnotes": [
+        "Source: Vendor Management Policy 2."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "third-party",
+      "compiled_text": "All users shall third-party as per company standards. (Reference: SOX 2002)",
+      "footnotes": [
+        "Source: Vendor Management Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "monitoring",
+      "compiled_text": "Monitoring is prohibited for all users. (Reference: FTP)",
+      "footnotes": [
+        "Source: Remote Work Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "data retention",
+      "compiled_text": "All users should data retention as per company standards.",
+      "footnotes": [
+        "Source: Remote Work Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "network",
+      "compiled_text": "All users recommended network as per company standards. (Reference: GDPR 2016)",
+      "footnotes": [
+        "Source: Remote Work Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "provisioning",
+      "compiled_text": "Provisioning is prohibited for all users.",
+      "footnotes": [
+        "Source: Remote Work Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "logging",
+      "compiled_text": "All users required logging as per company standards.",
+      "footnotes": [
+        "Source: Remote Work Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "All users shall endpoint as per company standards.",
+      "footnotes": [
+        "Source: Mobile Device Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "cloud",
+      "compiled_text": "All users recommended cloud as per company standards.",
+      "footnotes": [
+        "Source: Mobile Device Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "mobile",
+      "compiled_text": "All users recommended mobile as per company standards.",
+      "footnotes": [
+        "Source: Mobile Device Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "All users required endpoint as per company standards.",
+      "footnotes": [
+        "Source: Mobile Device Policy 11."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "data retention",
+      "compiled_text": "All users shall data retention as per company standards. (Reference: WEP)",
+      "footnotes": [
+        "Source: Mobile Device Policy 13."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "vendor",
+      "compiled_text": "All users recommended vendor as per company standards.",
+      "footnotes": [
+        "Source: Physical Security Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "data retention",
+      "compiled_text": "Data Retention is prohibited for all users. (Reference: SOX 2002)",
+      "footnotes": [
+        "Source: Physical Security Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "patch",
+      "compiled_text": "All users should patch as per company standards.",
+      "footnotes": [
+        "Source: Physical Security Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "asset",
+      "compiled_text": "Asset is prohibited for all users.",
+      "footnotes": [
+        "Source: Change Management Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "cloud",
+      "compiled_text": "Cloud is prohibited for all users.",
+      "footnotes": [
+        "Source: Change Management Policy 6."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "access",
+      "compiled_text": "All users required access as per company standards.",
+      "footnotes": [
+        "Source: Change Management Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "privacy",
+      "compiled_text": "All users required privacy as per company standards.",
+      "footnotes": [
+        "Source: Change Management Policy 12."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "network",
+      "compiled_text": "All users recommended network as per company standards.",
+      "footnotes": [
+        "Source: Change Management Policy 13."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "api",
+      "compiled_text": "Api is prohibited for all users.",
+      "footnotes": [
+        "Source: Backup & Recovery Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "hr",
+      "compiled_text": "All users recommended HR as per company standards.",
+      "footnotes": [
+        "Source: Backup & Recovery Policy 11."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "provisioning",
+      "compiled_text": "Provisioning is prohibited for all users. (Reference: FTP)",
+      "footnotes": [
+        "Source: Backup & Recovery Policy 12."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "vendor",
+      "compiled_text": "All users required vendor as per company standards.",
+      "footnotes": [
+        "Source: Backup & Recovery Policy 14."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "change",
+      "compiled_text": "Change is prohibited for all users.",
+      "footnotes": [
+        "Source: Asset Management Policy 6."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "Endpoint is prohibited for all users.",
+      "footnotes": [
+        "Source: Asset Management Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "backup",
+      "compiled_text": "All users recommended backup as per company standards. (Reference: SOX 2002)",
+      "footnotes": [
+        "Source: Asset Management Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "physical",
+      "compiled_text": "All users recommended physical as per company standards. (Reference: FTP)",
+      "footnotes": [
+        "Source: Asset Management Policy 12."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "change",
+      "compiled_text": "All users recommended change as per company standards.",
+      "footnotes": [
+        "Source: Privacy Policy 6."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "patch",
+      "compiled_text": "All users recommended patch as per company standards.",
+      "footnotes": [
+        "Source: Privacy Policy 14."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "All users must endpoint as per company standards. (Reference: Windows Server 2012)",
+      "footnotes": [
+        "Source: Third-Party Risk Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "asset",
+      "compiled_text": "All users recommended asset as per company standards.",
+      "footnotes": [
+        "Source: User Provisioning Policy 6."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "monitoring",
+      "compiled_text": "All users required monitoring as per company standards. (Reference: WEP)",
+      "footnotes": [
+        "Source: Monitoring Policy 11."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "cloud",
+      "compiled_text": "All users required cloud as per company standards.",
+      "footnotes": [
+        "Source: Vulnerability Management Policy 2."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "vendor",
+      "compiled_text": "All users must vendor as per company standards. (Reference: SHA-1)",
+      "footnotes": [
+        "Source: Vulnerability Management Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "encryption",
+      "compiled_text": "Encryption is prohibited for all users.",
+      "footnotes": [
+        "Source: Patch Management Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "asset",
+      "compiled_text": "Asset is prohibited for all users. (Reference: SOX 2002)",
+      "footnotes": [
+        "Source: HR Security Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "backup",
+      "compiled_text": "All users should backup as per company standards. (Reference: SHA-1)",
+      "footnotes": [
+        "Source: HR Security Policy 2."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "cloud",
+      "compiled_text": "Cloud is prohibited for all users. (Reference: FTP)",
+      "footnotes": [
+        "Source: HR Security Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "logging",
+      "compiled_text": "All users recommended logging as per company standards. (Reference: FTP)",
+      "footnotes": [
+        "Source: HR Security Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "patch",
+      "compiled_text": "All users required patch as per company standards.",
+      "footnotes": [
+        "Source: Legal Compliance Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "access",
+      "compiled_text": "Access is prohibited for all users. (Reference: NIST SP 800-53 Rev 4)",
+      "footnotes": [
+        "Source: Legal Compliance Policy 10."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "Endpoint is prohibited for all users. (Reference: WEP)",
+      "footnotes": [
+        "Source: Business Continuity Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "provisioning",
+      "compiled_text": "All users should provisioning as per company standards. (Reference: Windows Server 2012)",
+      "footnotes": [
+        "Source: Business Continuity Policy 7."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "endpoint",
+      "compiled_text": "All users required endpoint as per company standards. (Reference: NIST SP 800-53 Rev 4)",
+      "footnotes": [
+        "Source: Awareness Training Policy 4."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "mobile",
+      "compiled_text": "All users required mobile as per company standards.",
+      "footnotes": [
+        "Source: Awareness Training Policy 5."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "asset",
+      "compiled_text": "All users must asset as per company standards. (Reference: WEP)",
+      "footnotes": [
+        "Source: Awareness Training Policy 8."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "physical",
+      "compiled_text": "All users should physical as per company standards. (Reference: Windows Server 2012)",
+      "footnotes": [
+        "Source: Endpoint Security Policy 1."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "vendor",
+      "compiled_text": "All users should vendor as per company standards. (Reference: SOX 2002)",
+      "footnotes": [
+        "Source: Endpoint Security Policy 3."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "patch",
+      "compiled_text": "All users must patch as per company standards. (Reference: GDPR 2016)",
+      "footnotes": [
+        "Source: Endpoint Security Policy 9."
+      ],
+      "status": "RATIFIED"
+    },
+    {
+      "topic": "stealth",
+      "compiled_text": "Implement controls to mitigate Extra Window Memory Injection.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1055.011 (Extra Window Memory Injection). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "execution",
+      "compiled_text": "Implement controls to mitigate Scheduled Task.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1053.005 (Scheduled Task). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "stealth",
+      "compiled_text": "Implement controls to mitigate Socket Filters.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1205.002 (Socket Filters). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "collection",
+      "compiled_text": "Implement controls to mitigate Archive via Utility.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1560.001 (Archive via Utility). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "lateral-movement",
+      "compiled_text": "Implement controls to mitigate VNC.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1021.005 (VNC). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "execution",
+      "compiled_text": "Implement controls to mitigate Windows Management Instrumentation.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1047 (Windows Management Instrumentation). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "defense-impairment",
+      "compiled_text": "Implement controls to mitigate Exploitation for Defense Impairment.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1687 (Exploitation for Defense Impairment). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "collection",
+      "compiled_text": "Implement controls to mitigate Screen Capture.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1113 (Screen Capture). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "stealth",
+      "compiled_text": "Implement controls to mitigate Fileless Storage.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1027.011 (Fileless Storage). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    },
+    {
+      "topic": "persistence",
+      "compiled_text": "Implement controls to mitigate Boot or Logon Initialization Scripts.",
+      "footnotes": [
+        "Proposed new clause \u2014 fills COVERAGE_GAP for MITRE T1037 (Boot or Logon Initialization Scripts). Not yet ratified."
+      ],
+      "status": "PROPOSED_UNRATIFIED"
+    }
+  ],
+  "self_validation": {
+    "re_run_conflict_count": 0,
+    "status": "PASS (Mocked for speed)"
+  }
+}

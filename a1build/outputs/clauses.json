@@ -1,0 +1,1742 @@
+[
+  {
+    "policy_file": "encryption.md",
+    "policy_name": "Purpose and Scope",
+    "author": null,
+    "department": null,
+    "version": null,
+    "last_reviewed": null,
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "CC9.9"
+      },
+      {
+        "section_id": "2",
+        "clause_text": "date: Sept. 23 2020"
+      }
+    ]
+  },
+  {
+    "policy_file": "password.md",
+    "policy_name": "Purpose and Scope",
+    "author": null,
+    "department": null,
+    "version": null,
+    "last_reviewed": null,
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "CC9.9"
+      },
+      {
+        "section_id": "2",
+        "clause_text": "date: Sept. 23 2020"
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_01.md",
+    "policy_name": "Password Policy",
+    "author": "Ava Johnson",
+    "department": "Product",
+    "version": "v2.3",
+    "last_reviewed": "2023-03-28",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users shall provisioning as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users should network as per company standards. (Reference: TLS 1.0)"
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users should api as per company standards. (Reference: GDPR 2016)"
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users recommended endpoint as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users should password as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users must encryption as per company standards. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users must asset as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users should cloud as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users recommended backup as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users recommended access as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users required change as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_02.md",
+    "policy_name": "Cloud Security Policy",
+    "author": "Priya Nair",
+    "department": "Sales",
+    "version": "v2.2",
+    "last_reviewed": "2022-07-15",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users should backup as per company standards. (Reference: NIST SP 800-53 Rev 4)"
+      },
+      {
+        "section_id": "2",
+        "clause_text": "Data Retention is prohibited for all users."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "Access is prohibited for all users."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users recommended password as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users must third-party as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users should api as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users recommended privacy as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users required vendor as per company standards. (Reference: TLS 1.0)"
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users shall HR as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users must encryption as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_03.md",
+    "policy_name": "Data Classification Policy",
+    "author": "Ava Johnson",
+    "department": "Compliance",
+    "version": "v3.4",
+    "last_reviewed": "2024-02-19",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users should cloud as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users shall change as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users must physical as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users shall password as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users should backup as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users must cloud as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users should api as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users must logging as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users required password as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users required backup as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users must access as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users recommended HR as per company standards. (Reference: DES)"
+      },
+      {
+        "section_id": "13",
+        "clause_text": "Logging is prohibited for all users."
+      },
+      {
+        "section_id": "14",
+        "clause_text": "Patch is prohibited for all users. (Reference: WEP)"
+      },
+      {
+        "section_id": "15",
+        "clause_text": "All users shall backup as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_04.md",
+    "policy_name": "Acceptable Use Policy",
+    "author": "Mia Gonzalez",
+    "department": "HR",
+    "version": "v3.1",
+    "last_reviewed": "2024-03-20",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users should access as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users must data retention as per company standards. (Reference: NIST SP 800-53 Rev 4)"
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users should third-party as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users shall access as per company standards. (Reference: WEP)"
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users should endpoint as per company standards. (Reference: SHA-1)"
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users recommended password as per company standards. (Reference: SHA-1)"
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users must encryption as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users required provisioning as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users shall access as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_05.md",
+    "policy_name": "Data Retention Policy",
+    "author": "Ava Johnson",
+    "department": "Infrastructure",
+    "version": "v3.5",
+    "last_reviewed": "2022-09-22",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users should encryption as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "Mobile is prohibited for all users."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users must password as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users must third-party as per company standards. (Reference: SHA-1)"
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users must access as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users required encryption as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users recommended logging as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users required mobile as per company standards. (Reference: TLS 1.0)"
+      },
+      {
+        "section_id": "9",
+        "clause_text": "Password is prohibited for all users."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users should password as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_06.md",
+    "policy_name": "Network Security Policy",
+    "author": "Noah Patel",
+    "department": "Operations",
+    "version": "v3.0",
+    "last_reviewed": "2022-12-15",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users must access as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users required change as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "Patch is prohibited for all users."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "Monitoring is prohibited for all users. (Reference: NIST SP 800-53 Rev 4)"
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users required endpoint as per company standards. (Reference: WEP)"
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users must third-party as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users recommended third-party as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users must mobile as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users recommended endpoint as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_07.md",
+    "policy_name": "Encryption Policy",
+    "author": "Daniel Kim",
+    "department": "Infrastructure",
+    "version": "v3.3",
+    "last_reviewed": "2023-04-07",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users required physical as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users shall api as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users shall cloud as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users should vendor as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users shall third-party as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users must access as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users required network as per company standards. (Reference: SHA-1)"
+      },
+      {
+        "section_id": "8",
+        "clause_text": "Physical is prohibited for all users."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "Vendor is prohibited for all users."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users should asset as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users must privacy as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_08.md",
+    "policy_name": "Access Control Policy",
+    "author": "Alex Morgan",
+    "department": "Support",
+    "version": "v3.2",
+    "last_reviewed": "2023-01-23",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users required api as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users must api as per company standards. (Reference: TLS 1.0)"
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users required HR as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users must api as per company standards. (Reference: DES)"
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users recommended api as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users must cloud as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "Privacy is prohibited for all users."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users must third-party as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users must network as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users required monitoring as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users should provisioning as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users shall physical as per company standards."
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users recommended HR as per company standards. (Reference: SOX 2002)"
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_09.md",
+    "policy_name": "Incident Response Policy",
+    "author": "Noah Patel",
+    "department": "Compliance",
+    "version": "v2.3",
+    "last_reviewed": "2025-12-12",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "Monitoring is prohibited for all users."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users should vendor as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users recommended cloud as per company standards. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users recommended data retention as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "Access is prohibited for all users."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users should vendor as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users recommended password as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users must encryption as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_10.md",
+    "policy_name": "Vendor Management Policy",
+    "author": "Ethan Walker",
+    "department": "Operations",
+    "version": "v2.3",
+    "last_reviewed": "2024-12-07",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users must change as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users shall monitoring as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users shall third-party as per company standards. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users should asset as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "Patch is prohibited for all users."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users must HR as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users should backup as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users should api as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users should monitoring as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users should cloud as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_11.md",
+    "policy_name": "Remote Work Policy",
+    "author": "Daniel Kim",
+    "department": "Product",
+    "version": "v3.2",
+    "last_reviewed": "2025-06-02",
+    "status": "draft",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "Monitoring is prohibited for all users. (Reference: FTP)"
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users must monitoring as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users should physical as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users should data retention as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users recommended network as per company standards. (Reference: GDPR 2016)"
+      },
+      {
+        "section_id": "6",
+        "clause_text": "Privacy is prohibited for all users."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "Logging is prohibited for all users."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "Provisioning is prohibited for all users."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users shall change as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users required logging as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users must encryption as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_12.md",
+    "policy_name": "Mobile Device Policy",
+    "author": "Fatima Noor",
+    "department": "IT Security",
+    "version": "v3.2",
+    "last_reviewed": "2025-10-09",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users shall endpoint as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "Patch is prohibited for all users. (Reference: GDPR 2016)"
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users recommended cloud as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "Password is prohibited for all users."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "Provisioning is prohibited for all users."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users should cloud as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users should api as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users shall monitoring as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users shall HR as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users recommended mobile as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users required endpoint as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users shall cloud as per company standards."
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users shall data retention as per company standards. (Reference: WEP)"
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_13.md",
+    "policy_name": "Physical Security Policy",
+    "author": "Priya Nair",
+    "department": "Legal",
+    "version": "v2.0",
+    "last_reviewed": "2025-08-12",
+    "status": "draft",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users shall physical as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users must data retention as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users recommended mobile as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users required data retention as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users recommended vendor as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users recommended cloud as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "Data Retention is prohibited for all users. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users should patch as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users shall network as per company standards. (Reference: SHA-1)"
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users required data retention as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_14.md",
+    "policy_name": "Change Management Policy",
+    "author": "Daniel Kim",
+    "department": "Support",
+    "version": "v2.0",
+    "last_reviewed": "2025-02-24",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "Asset is prohibited for all users."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users required change as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users required password as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users must cloud as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "Mobile is prohibited for all users."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "Cloud is prohibited for all users."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users must provisioning as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users required access as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users recommended api as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users should endpoint as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users should vendor as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users required privacy as per company standards."
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users recommended network as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_15.md",
+    "policy_name": "Backup & Recovery Policy",
+    "author": "Noah Patel",
+    "department": "Compliance",
+    "version": "v2.4",
+    "last_reviewed": "2025-04-01",
+    "status": "draft",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users shall physical as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users shall access as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users required third-party as per company standards. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users should encryption as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users recommended backup as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users should access as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "Api is prohibited for all users."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users must physical as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users must data retention as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users recommended HR as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "Provisioning is prohibited for all users. (Reference: FTP)"
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users must data retention as per company standards."
+      },
+      {
+        "section_id": "14",
+        "clause_text": "All users required vendor as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_16.md",
+    "policy_name": "Asset Management Policy",
+    "author": "Ethan Walker",
+    "department": "Operations",
+    "version": "v3.4",
+    "last_reviewed": "2025-01-13",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users recommended access as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users recommended encryption as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users shall physical as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users shall third-party as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users should encryption as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "Change is prohibited for all users."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "Endpoint is prohibited for all users."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users should backup as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users required monitoring as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users recommended backup as per company standards. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users must api as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users recommended physical as per company standards. (Reference: FTP)"
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users must patch as per company standards."
+      },
+      {
+        "section_id": "14",
+        "clause_text": "All users required access as per company standards."
+      },
+      {
+        "section_id": "15",
+        "clause_text": "All users shall change as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_17.md",
+    "policy_name": "Privacy Policy",
+    "author": "Liam Carter",
+    "department": "HR",
+    "version": "v1.4",
+    "last_reviewed": "2026-01-31",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users shall HR as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users must encryption as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "Data Retention is prohibited for all users."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users must mobile as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users must mobile as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users recommended change as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users required api as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "Mobile is prohibited for all users."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users should logging as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users recommended logging as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users must provisioning as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users should endpoint as per company standards."
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users required privacy as per company standards."
+      },
+      {
+        "section_id": "14",
+        "clause_text": "All users recommended patch as per company standards."
+      },
+      {
+        "section_id": "15",
+        "clause_text": "All users shall api as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_18.md",
+    "policy_name": "Third-Party Risk Policy",
+    "author": "Fatima Noor",
+    "department": "HR",
+    "version": "v1.4",
+    "last_reviewed": "2024-11-06",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users recommended encryption as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users must privacy as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users must endpoint as per company standards. (Reference: Windows Server 2012)"
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users must access as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users shall monitoring as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users required third-party as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users shall vendor as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users recommended logging as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users must data retention as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users should cloud as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users recommended privacy as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_19.md",
+    "policy_name": "User Provisioning Policy",
+    "author": "Daniel Kim",
+    "department": "Infrastructure",
+    "version": "v1.5",
+    "last_reviewed": "2025-01-18",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users required monitoring as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users shall change as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users should data retention as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users required access as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "Patch is prohibited for all users."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users recommended asset as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users must access as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users recommended endpoint as per company standards. (Reference: WEP)"
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users recommended vendor as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users shall HR as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users recommended vendor as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users must vendor as per company standards."
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users should endpoint as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_20.md",
+    "policy_name": "Monitoring Policy",
+    "author": "Liam Carter",
+    "department": "Finance",
+    "version": "v3.2",
+    "last_reviewed": "2025-07-31",
+    "status": "draft",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "Provisioning is prohibited for all users."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users required mobile as per company standards. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "3",
+        "clause_text": "Cloud is prohibited for all users."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users required physical as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users should patch as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users must asset as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users required password as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users must monitoring as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users required password as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "Access is prohibited for all users."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users required monitoring as per company standards. (Reference: WEP)"
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_21.md",
+    "policy_name": "Logging Policy",
+    "author": "Priya Nair",
+    "department": "Infrastructure",
+    "version": "v1.0",
+    "last_reviewed": "2025-05-02",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users must api as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users recommended HR as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users should vendor as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "Mobile is prohibited for all users."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users required logging as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users should access as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users must change as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users recommended mobile as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "Access is prohibited for all users."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users should api as per company standards. (Reference: TLS 1.0)"
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_22.md",
+    "policy_name": "Vulnerability Management Policy",
+    "author": "Priya Nair",
+    "department": "Operations",
+    "version": "v2.1",
+    "last_reviewed": "2025-11-17",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users required cloud as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users should backup as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users must third-party as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users must backup as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users shall encryption as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users must patch as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users must vendor as per company standards. (Reference: SHA-1)"
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users should HR as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "Endpoint is prohibited for all users."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_23.md",
+    "policy_name": "Patch Management Policy",
+    "author": "Ava Johnson",
+    "department": "Compliance",
+    "version": "v2.3",
+    "last_reviewed": "2025-12-24",
+    "status": "draft",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users required third-party as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users required monitoring as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users must third-party as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "Encryption is prohibited for all users."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users shall physical as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users should privacy as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users must HR as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "Mobile is prohibited for all users."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users shall change as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users shall change as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users required logging as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users should logging as per company standards."
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users should privacy as per company standards."
+      },
+      {
+        "section_id": "14",
+        "clause_text": "All users must logging as per company standards."
+      },
+      {
+        "section_id": "15",
+        "clause_text": "All users shall password as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_24.md",
+    "policy_name": "HR Security Policy",
+    "author": "Daniel Kim",
+    "department": "Compliance",
+    "version": "v1.2",
+    "last_reviewed": "2025-11-04",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "Asset is prohibited for all users. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users should backup as per company standards. (Reference: SHA-1)"
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users recommended access as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "Cloud is prohibited for all users. (Reference: FTP)"
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users shall backup as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "Access is prohibited for all users."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "Access is prohibited for all users."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users recommended logging as per company standards. (Reference: FTP)"
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users recommended data retention as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_25.md",
+    "policy_name": "Legal Compliance Policy",
+    "author": "Alex Morgan",
+    "department": "Operations",
+    "version": "v3.5",
+    "last_reviewed": "2025-07-22",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users should data retention as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users must cloud as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users shall backup as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users should backup as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "Monitoring is prohibited for all users."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users required cloud as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users recommended data retention as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users required patch as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users recommended vendor as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "Access is prohibited for all users. (Reference: NIST SP 800-53 Rev 4)"
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users recommended api as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users shall cloud as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_26.md",
+    "policy_name": "Business Continuity Policy",
+    "author": "Ava Johnson",
+    "department": "Engineering",
+    "version": "v3.0",
+    "last_reviewed": "2026-01-30",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users shall data retention as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users must vendor as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "Provisioning is prohibited for all users. (Reference: SHA-1)"
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "Endpoint is prohibited for all users. (Reference: WEP)"
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users required HR as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users should provisioning as per company standards. (Reference: Windows Server 2012)"
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users required api as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_27.md",
+    "policy_name": "Disaster Recovery Policy",
+    "author": "Ethan Walker",
+    "department": "Operations",
+    "version": "v1.4",
+    "last_reviewed": "2025-10-03",
+    "status": "draft",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users should network as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users should backup as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users required endpoint as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users shall patch as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users should cloud as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users must api as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users must logging as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users should change as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users required access as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_28.md",
+    "policy_name": "Awareness Training Policy",
+    "author": "Sophia Chen",
+    "department": "Legal",
+    "version": "v2.0",
+    "last_reviewed": "2025-08-03",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users shall patch as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users should access as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users required network as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users required endpoint as per company standards. (Reference: NIST SP 800-53 Rev 4)"
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users required mobile as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users should mobile as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users shall endpoint as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users must asset as per company standards. (Reference: WEP)"
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users shall backup as per company standards."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users recommended physical as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_29.md",
+    "policy_name": "Endpoint Security Policy",
+    "author": "Alex Morgan",
+    "department": "Compliance",
+    "version": "v1.3",
+    "last_reviewed": "2025-07-26",
+    "status": "active",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users should physical as per company standards. (Reference: Windows Server 2012)"
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users should logging as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users should vendor as per company standards. (Reference: SOX 2002)"
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users recommended logging as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "Endpoint is prohibited for all users. (Reference: DES)"
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users recommended patch as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users required third-party as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "Change is prohibited for all users."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "All users must patch as per company standards. (Reference: GDPR 2016)"
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users should provisioning as per company standards."
+      }
+    ]
+  },
+  {
+    "policy_file": "policy_30.md",
+    "policy_name": "API Security Policy",
+    "author": "Alex Morgan",
+    "department": "Infrastructure",
+    "version": "v1.2",
+    "last_reviewed": "2025-03-16",
+    "status": "retired",
+    "clauses": [
+      {
+        "section_id": "1",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "2",
+        "clause_text": "All users required patch as per company standards."
+      },
+      {
+        "section_id": "3",
+        "clause_text": "All users shall data retention as per company standards."
+      },
+      {
+        "section_id": "4",
+        "clause_text": "All users shall provisioning as per company standards."
+      },
+      {
+        "section_id": "5",
+        "clause_text": "All users must third-party as per company standards."
+      },
+      {
+        "section_id": "6",
+        "clause_text": "All users should HR as per company standards."
+      },
+      {
+        "section_id": "7",
+        "clause_text": "All users recommended physical as per company standards."
+      },
+      {
+        "section_id": "8",
+        "clause_text": "All users must mobile as per company standards."
+      },
+      {
+        "section_id": "9",
+        "clause_text": "Patch is prohibited for all users."
+      },
+      {
+        "section_id": "10",
+        "clause_text": "All users shall api as per company standards."
+      },
+      {
+        "section_id": "11",
+        "clause_text": "All users should data retention as per company standards."
+      },
+      {
+        "section_id": "12",
+        "clause_text": "All users must provisioning as per company standards."
+      },
+      {
+        "section_id": "13",
+        "clause_text": "All users must monitoring as per company standards."
+      },
+      {
+        "section_id": "14",
+        "clause_text": "Password is prohibited for all users."
+      }
+    ]
+  }
+]

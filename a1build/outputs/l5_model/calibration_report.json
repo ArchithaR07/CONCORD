@@ -1,0 +1,23 @@
+{
+  "n_pairs": 2747,
+  "n_positive": 0,
+  "n_negative": 2747,
+  "method": "fallback_prior_weights",
+  "weights": {
+    "rule_signal": 0.45,
+    "embedding_similarity": 0.2,
+    "llm_confidence": 0.2,
+    "agreement_bonus": 0.15
+  },
+  "thresholds": {
+    "HIGH": 0.7,
+    "MEDIUM": 0.4
+  },
+  "label_coverage": {
+    "findings_labels_positive_rows": 45,
+    "findings_labels_hard_negative_rows": 15,
+    "matched_to_a_real_candidate_pair_positive": 0,
+    "matched_to_a_real_candidate_pair_hard_negative": 0,
+    "note": "A labeled finding only becomes a usable training example if both named policies actually contain an extractable obligation on the stated topic. If matched << labeled, check obligations_embedded.json for topic coverage gaps before assuming the matching logic is broken."
+  }
+}

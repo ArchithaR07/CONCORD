@@ -1,0 +1,451 @@
+{
+  "alpha_used": 1.0,
+  "org_wide_score": 51.94,
+  "per_policy": [
+    {
+      "policy": "API Security Policy",
+      "obligation_count": 14,
+      "redundancy_clusters_involved": 11,
+      "findings_penalty": 55.59,
+      "standalone_stale_penalty": 0,
+      "score": 44.41
+    },
+    {
+      "policy": "Acceptable Use Policy",
+      "obligation_count": 11,
+      "redundancy_clusters_involved": 5,
+      "findings_penalty": 25.36,
+      "standalone_stale_penalty": 15,
+      "score": 59.64
+    },
+    {
+      "policy": "Access Control Policy",
+      "obligation_count": 13,
+      "redundancy_clusters_involved": 12,
+      "findings_penalty": 60.44,
+      "standalone_stale_penalty": 5,
+      "score": 34.56
+    },
+    {
+      "policy": "Asset Management Policy",
+      "obligation_count": 15,
+      "redundancy_clusters_involved": 12,
+      "findings_penalty": 60.58,
+      "standalone_stale_penalty": 0,
+      "score": 39.42
+    },
+    {
+      "policy": "Awareness Training Policy",
+      "obligation_count": 10,
+      "redundancy_clusters_involved": 7,
+      "findings_penalty": 35.37,
+      "standalone_stale_penalty": 5,
+      "score": 59.63
+    },
+    {
+      "policy": "Backup & Recovery Policy",
+      "obligation_count": 14,
+      "redundancy_clusters_involved": 9,
+      "findings_penalty": 45.42,
+      "standalone_stale_penalty": 0,
+      "score": 54.58
+    },
+    {
+      "policy": "Business Continuity Policy",
+      "obligation_count": 8,
+      "redundancy_clusters_involved": 7,
+      "findings_penalty": 35.25,
+      "standalone_stale_penalty": 0,
+      "score": 64.75
+    },
+    {
+      "policy": "Change Management Policy",
+      "obligation_count": 13,
+      "redundancy_clusters_involved": 11,
+      "findings_penalty": 55.44,
+      "standalone_stale_penalty": 0,
+      "score": 44.56
+    },
+    {
+      "policy": "Cloud Security Policy",
+      "obligation_count": 11,
+      "redundancy_clusters_involved": 9,
+      "findings_penalty": 45.44,
+      "standalone_stale_penalty": 5,
+      "score": 49.56
+    },
+    {
+      "policy": "Data Classification Policy",
+      "obligation_count": 15,
+      "redundancy_clusters_involved": 11,
+      "findings_penalty": 55.59,
+      "standalone_stale_penalty": 0,
+      "score": 44.41
+    },
+    {
+      "policy": "Data Retention Policy",
+      "obligation_count": 10,
+      "redundancy_clusters_involved": 7,
+      "findings_penalty": 35.31,
+      "standalone_stale_penalty": 5,
+      "score": 59.69
+    },
+    {
+      "policy": "Disaster Recovery Policy",
+      "obligation_count": 9,
+      "redundancy_clusters_involved": 9,
+      "findings_penalty": 45.48,
+      "standalone_stale_penalty": 0,
+      "score": 54.52
+    },
+    {
+      "policy": "Encryption Policy",
+      "obligation_count": 11,
+      "redundancy_clusters_involved": 9,
+      "findings_penalty": 45.48,
+      "standalone_stale_penalty": 0,
+      "score": 54.52
+    },
+    {
+      "policy": "Endpoint Security Policy",
+      "obligation_count": 10,
+      "redundancy_clusters_involved": 7,
+      "findings_penalty": 35.26,
+      "standalone_stale_penalty": 0,
+      "score": 64.74
+    },
+    {
+      "policy": "HR Security Policy",
+      "obligation_count": 9,
+      "redundancy_clusters_involved": 4,
+      "findings_penalty": 20.17,
+      "standalone_stale_penalty": 5,
+      "score": 74.83
+    },
+    {
+      "policy": "Incident Response Policy",
+      "obligation_count": 8,
+      "redundancy_clusters_involved": 6,
+      "findings_penalty": 30.22,
+      "standalone_stale_penalty": 0,
+      "score": 69.78
+    },
+    {
+      "policy": "Legal Compliance Policy",
+      "obligation_count": 12,
+      "redundancy_clusters_involved": 8,
+      "findings_penalty": 40.33,
+      "standalone_stale_penalty": 0,
+      "score": 59.67
+    },
+    {
+      "policy": "Logging Policy",
+      "obligation_count": 10,
+      "redundancy_clusters_involved": 10,
+      "findings_penalty": 50.45,
+      "standalone_stale_penalty": 0,
+      "score": 49.55
+    },
+    {
+      "policy": "Mobile Device Policy",
+      "obligation_count": 13,
+      "redundancy_clusters_involved": 10,
+      "findings_penalty": 50.38,
+      "standalone_stale_penalty": 5,
+      "score": 44.62
+    },
+    {
+      "policy": "Monitoring Policy",
+      "obligation_count": 11,
+      "redundancy_clusters_involved": 9,
+      "findings_penalty": 45.3,
+      "standalone_stale_penalty": 5,
+      "score": 49.7
+    },
+    {
+      "policy": "Network Security Policy",
+      "obligation_count": 9,
+      "redundancy_clusters_involved": 7,
+      "findings_penalty": 35.28,
+      "standalone_stale_penalty": 0,
+      "score": 64.72
+    },
+    {
+      "policy": "Password Policy",
+      "obligation_count": 11,
+      "redundancy_clusters_involved": 10,
+      "findings_penalty": 50.31,
+      "standalone_stale_penalty": 0,
+      "score": 49.69
+    },
+    {
+      "policy": "Patch Management Policy",
+      "obligation_count": 15,
+      "redundancy_clusters_involved": 9,
+      "findings_penalty": 45.47,
+      "standalone_stale_penalty": 0,
+      "score": 54.53
+    },
+    {
+      "policy": "Physical Security Policy",
+      "obligation_count": 10,
+      "redundancy_clusters_involved": 7,
+      "findings_penalty": 35.25,
+      "standalone_stale_penalty": 0,
+      "score": 64.75
+    },
+    {
+      "policy": "Privacy Policy",
+      "obligation_count": 15,
+      "redundancy_clusters_involved": 13,
+      "findings_penalty": 65.53,
+      "standalone_stale_penalty": 0,
+      "score": 34.47
+    },
+    {
+      "policy": "Remote Work Policy",
+      "obligation_count": 11,
+      "redundancy_clusters_involved": 9,
+      "findings_penalty": 45.47,
+      "standalone_stale_penalty": 0,
+      "score": 54.53
+    },
+    {
+      "policy": "Third-Party Risk Policy",
+      "obligation_count": 11,
+      "redundancy_clusters_involved": 10,
+      "findings_penalty": 50.55,
+      "standalone_stale_penalty": 0,
+      "score": 49.45
+    },
+    {
+      "policy": "User Provisioning Policy",
+      "obligation_count": 13,
+      "redundancy_clusters_involved": 11,
+      "findings_penalty": 55.55,
+      "standalone_stale_penalty": 0,
+      "score": 44.45
+    },
+    {
+      "policy": "Vendor Management Policy",
+      "obligation_count": 11,
+      "redundancy_clusters_involved": 10,
+      "findings_penalty": 50.59,
+      "standalone_stale_penalty": 0,
+      "score": 49.41
+    },
+    {
+      "policy": "Vulnerability Management Policy",
+      "obligation_count": 10,
+      "redundancy_clusters_involved": 8,
+      "findings_penalty": 40.43,
+      "standalone_stale_penalty": 5,
+      "score": 54.57
+    }
+  ],
+  "policy_debt_by_department": [
+    {
+      "department": "org_wide",
+      "obligation_count": 343,
+      "policy_debt_raw": 361.94,
+      "policy_debt_per_obligation": 1.055
+    }
+  ],
+  "sensitivity_check": {
+    "top_n": 10,
+    "rankings_by_alpha": {
+      "0.5": [
+        [
+          "FIND-00190",
+          5.05
+        ],
+        [
+          "FIND-00191",
+          5.05
+        ],
+        [
+          "FIND-00192",
+          5.05
+        ],
+        [
+          "FIND-00193",
+          5.05
+        ],
+        [
+          "FIND-00194",
+          5.05
+        ],
+        [
+          "FIND-00195",
+          5.05
+        ],
+        [
+          "FIND-00196",
+          5.05
+        ],
+        [
+          "FIND-00197",
+          5.05
+        ],
+        [
+          "FIND-00198",
+          5.05
+        ],
+        [
+          "FIND-00199",
+          5.05
+        ]
+      ],
+      "1.0": [
+        [
+          "FIND-00190",
+          5.1
+        ],
+        [
+          "FIND-00191",
+          5.1
+        ],
+        [
+          "FIND-00192",
+          5.1
+        ],
+        [
+          "FIND-00193",
+          5.1
+        ],
+        [
+          "FIND-00194",
+          5.1
+        ],
+        [
+          "FIND-00195",
+          5.1
+        ],
+        [
+          "FIND-00196",
+          5.1
+        ],
+        [
+          "FIND-00197",
+          5.1
+        ],
+        [
+          "FIND-00198",
+          5.1
+        ],
+        [
+          "FIND-00199",
+          5.1
+        ]
+      ],
+      "1.5": [
+        [
+          "FIND-00190",
+          5.15
+        ],
+        [
+          "FIND-00191",
+          5.15
+        ],
+        [
+          "FIND-00192",
+          5.15
+        ],
+        [
+          "FIND-00193",
+          5.15
+        ],
+        [
+          "FIND-00194",
+          5.15
+        ],
+        [
+          "FIND-00195",
+          5.15
+        ],
+        [
+          "FIND-00196",
+          5.15
+        ],
+        [
+          "FIND-00197",
+          5.15
+        ],
+        [
+          "FIND-00198",
+          5.15
+        ],
+        [
+          "FIND-00199",
+          5.15
+        ]
+      ],
+      "2.0": [
+        [
+          "FIND-00190",
+          5.2
+        ],
+        [
+          "FIND-00191",
+          5.2
+        ],
+        [
+          "FIND-00192",
+          5.2
+        ],
+        [
+          "FIND-00193",
+          5.2
+        ],
+        [
+          "FIND-00194",
+          5.2
+        ],
+        [
+          "FIND-00195",
+          5.2
+        ],
+        [
+          "FIND-00196",
+          5.2
+        ],
+        [
+          "FIND-00197",
+          5.2
+        ],
+        [
+          "FIND-00198",
+          5.2
+        ],
+        [
+          "FIND-00199",
+          5.2
+        ]
+      ]
+    },
+    "stability": [
+      {
+        "alpha_pair": [
+          0.5,
+          1.0
+        ],
+        "top_n_jaccard_overlap": 1.0
+      },
+      {
+        "alpha_pair": [
+          1.0,
+          1.5
+        ],
+        "top_n_jaccard_overlap": 1.0
+      },
+      {
+        "alpha_pair": [
+          1.5,
+          2.0
+        ],
+        "top_n_jaccard_overlap": 1.0
+      }
+    ],
+    "claim": "Ranking is considered stable if consecutive-alpha Jaccard overlap stays >= 0.8."
+  }
+}

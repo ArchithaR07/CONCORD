@@ -1,0 +1,102 @@
+[
+  {
+    "finding_id": "GAP-00001",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1055.011",
+    "technique_name": "Extra Window Memory Injection",
+    "tactic": "stealth",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Extra Window Memory Injection."
+  },
+  {
+    "finding_id": "GAP-00002",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1053.005",
+    "technique_name": "Scheduled Task",
+    "tactic": "execution",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Scheduled Task."
+  },
+  {
+    "finding_id": "GAP-00003",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1205.002",
+    "technique_name": "Socket Filters",
+    "tactic": "stealth",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Socket Filters."
+  },
+  {
+    "finding_id": "GAP-00004",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1560.001",
+    "technique_name": "Archive via Utility",
+    "tactic": "collection",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Archive via Utility."
+  },
+  {
+    "finding_id": "GAP-00005",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1021.005",
+    "technique_name": "VNC",
+    "tactic": "lateral-movement",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate VNC."
+  },
+  {
+    "finding_id": "GAP-00006",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1047",
+    "technique_name": "Windows Management Instrumentation",
+    "tactic": "execution",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Windows Management Instrumentation."
+  },
+  {
+    "finding_id": "GAP-00007",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1687",
+    "technique_name": "Exploitation for Defense Impairment",
+    "tactic": "defense-impairment",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Exploitation for Defense Impairment."
+  },
+  {
+    "finding_id": "GAP-00008",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1113",
+    "technique_name": "Screen Capture",
+    "tactic": "collection",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Screen Capture."
+  },
+  {
+    "finding_id": "GAP-00009",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1027.011",
+    "technique_name": "Fileless Storage",
+    "tactic": "stealth",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Fileless Storage."
+  },
+  {
+    "finding_id": "GAP-00010",
+    "finding_type": "COVERAGE_GAP",
+    "technique_id": "T1037",
+    "technique_name": "Boot or Logon Initialization Scripts",
+    "tactic": "persistence",
+    "severity": "HIGH",
+    "gap_reason": "No operative obligation maps to any MITRE Mitigation associated with this technique.",
+    "suggested_draft_clause": "Implement controls to mitigate Boot or Logon Initialization Scripts."
+  }
+]
