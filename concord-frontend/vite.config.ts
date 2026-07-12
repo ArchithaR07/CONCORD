@@ -106,18 +106,16 @@ function vitePluginManusDebugCollector(): Plugin {
         const url = new URL(req.url || "", `http://${req.headers.host}`);
         const pathname = url.pathname;
 
-        // Helper function to robustly locate backend engine outputs
+        // Helper function to locate the unified a1build outputs directory
         const getOutputDir = () => {
-          const possiblePaths = [
-            path.resolve(PROJECT_ROOT, "..", "CONCORD-A2", "sample_data", "output"),
-            path.resolve(PROJECT_ROOT, "CONCORD-A2", "sample_data", "output"),
+          const candidates = [
+            path.resolve(PROJECT_ROOT, "..", "a1build", "outputs"),
+            path.resolve(PROJECT_ROOT, "a1build", "outputs"),
           ];
-          for (const p of possiblePaths) {
-            if (fs.existsSync(p)) {
-              return p;
-            }
+          for (const p of candidates) {
+            if (fs.existsSync(p)) return p;
           }
-          return "c:\\Users\\lenovo\\OneDrive\\Desktop\\concord\\CONCORD\\CONCORD-A2\\sample_data\\output";
+          return path.resolve(PROJECT_ROOT, "..", "a1build", "outputs");
         };
 
         const readJsonFile = (filename: string) => {
@@ -165,23 +163,27 @@ function vitePluginManusDebugCollector(): Plugin {
 
               try {
                 const a1Dir = path.resolve(PROJECT_ROOT, "..", "a1build");
-                const a2Dir = path.resolve(PROJECT_ROOT, "..", "concord-a2 (1)", "concord-a2");
-                
-                await runCommand("..\\venv\\Scripts\\python run_a1_pipeline.py", a1Dir);
-                
-                const a1OutDir = path.join(a1Dir, "outputs");
-                const a2OutDir = path.join(a2Dir, "outputs");
-                if (!fs.existsSync(a2OutDir)) fs.mkdirSync(a2OutDir, { recursive: true });
-                fs.copyFileSync(path.join(a1OutDir, "obligations_embedded.json"), path.join(a2OutDir, "obligations.json"));
-                
-                await runCommand("..\\venv\\Scripts\\python scripts\\run_pipeline.py", a2Dir);
-                
-                return sendJson({ message: "Pipelines executed successfully" });
+                await runCommand(`venv\\Scripts\\python run_pipeline.py`, a1Dir);
+                return sendJson({ message: "Unified pipeline executed successfully" });
               } catch (e: any) {
                 return sendError(500, e.message);
               }
             });
             return;
+          }
+
+          if (pathname === "/inventory" || pathname === "/inventory/") {
+            const A1_POLICIES_DIR = path.resolve(PROJECT_ROOT, "..", "a1build", "data", "policies");
+            try {
+              if (fs.existsSync(A1_POLICIES_DIR)) {
+                const files = fs.readdirSync(A1_POLICIES_DIR).filter(f => f.endsWith('.md') || f.endsWith('.txt') || f.endsWith('.pdf'));
+                return sendJson({ files });
+              } else {
+                return sendJson({ files: [] });
+              }
+            } catch (err: any) {
+              return sendError(500, err.message);
+            }
           }
 
           if (pathname === "/scores" || pathname === "/scores/") {
@@ -191,9 +193,11 @@ function vitePluginManusDebugCollector(): Plugin {
           }
 
           if (pathname === "/staleness" || pathname === "/staleness/") {
-            const data = readJsonFile("staleness_rollup.json");
-            if (!data) return sendError(404, "staleness_rollup.json not found");
-            return sendJson(data);
+            const data = readJsonFile("staleness.json") || readJsonFile("staleness_rollup.json") || readJsonFile("staleness_by_document.json");
+            if (!data) return sendError(404, "staleness data not found");
+            const arr = Array.isArray(data) ? data : [];
+            const mapped = arr.map((d: any) => ({ ...d, doc_staleness_status: d.doc_staleness_status || d.staleness_status }));
+            return sendJson(mapped);
           }
 
           if (pathname === "/graph" || pathname === "/graph/") {
@@ -229,8 +233,8 @@ function vitePluginManusDebugCollector(): Plugin {
                 (f.policy_a && f.policy_a.toLowerCase().includes(q)) ||
                 (f.policy_b && f.policy_b.toLowerCase().includes(q)) ||
                 (f.description && f.description.toLowerCase().includes(q)) ||
-                (f.obligation_id_1 && f.obligation_id_1.toLowerCase().includes(q)) ||
-                (f.obligation_id_2 && f.obligation_id_2.toLowerCase().includes(q))
+                (f.obligation_id_a && f.obligation_id_a.toLowerCase().includes(q)) ||
+                (f.obligation_id_b && f.obligation_id_b.toLowerCase().includes(q))
               );
             }
 
@@ -298,6 +302,97 @@ function vitePluginManusDebugCollector(): Plugin {
               offset: off,
               data: paginated
             });
+          }
+
+          if (pathname === "/crucible" || pathname === "/crucible/") {
+            const data = readJsonFile("crucible_findings.json");
+            if (!data) return sendError(404, "crucible_findings.json not found");
+            const findings = Array.isArray(data) ? data : [];
+            return sendJson({ total: findings.length, data: findings });
+          }
+
+          if (pathname === "/compiled" || pathname === "/compiled/") {
+            const data = readJsonFile("compiled_document.json");
+            if (!data) return sendError(404, "compiled_document.json not found");
+            return sendJson(data);
+          }
+
+          if (pathname === "/echo" || pathname === "/echo/") {
+            if (req.method !== "POST") return sendError(405, "Method not allowed");
+            
+            let body = "";
+            req.on("data", chunk => body += chunk.toString());
+            req.on("end", () => {
+              try {
+                const { question } = JSON.parse(body);
+                const q = (question || "").toLowerCase();
+                let answer = "I processed your query against the CONCORD graph.";
+                let details = "No specific overlaps or insights were triggered by your parameters.";
+
+                const findings = readJsonFile("resolved_findings.json") || [];
+                const stalenessData = readJsonFile("staleness_by_document.json") || readJsonFile("staleness.json") || [];
+                const crucible = readJsonFile("crucible_findings.json") || [];
+
+                if (q.includes("stale") || q.includes("old") || q.includes("decay")) {
+                  const staleDocs = stalenessData.filter((d: any) => d.staleness_status === "STALE" || d.doc_staleness_status === "STALE");
+                  answer = `I found ${staleDocs.length} stale policy documents in the active workspace.`;
+                  details = `Stale documents: ${staleDocs.map((d: any) => d.doc_id || d.policy).slice(0, 5).join(", ")}${staleDocs.length > 5 ? "..." : ""}. These documents have exceeded the decay cutoff window.`;
+                } 
+                else if (q.includes("override") || q.includes("precedence")) {
+                  const overrides = findings.filter((f: any) => f.finding_type === "CONFLICT" && f.precedence_resolution && f.precedence_resolution.governing_policy);
+                  if (overrides.length > 0) {
+                    const c = overrides[0];
+                    answer = `Found active precedence resolution: ${c.precedence_resolution.governing_policy} overrides other conflicting documents.`;
+                    details = `Reasoning: ${c.precedence_resolution.reasoning || "Resolved via structural precedence rules."}`;
+                  } else {
+                    answer = "No active overrides found in the current graph.";
+                  }
+                }
+                else if (q.includes("conflict") || q.includes("contradiction")) {
+                  const conflicts = findings.filter((f: any) => f.finding_type === "CONFLICT");
+                  if (conflicts.length > 0) {
+                    const c = conflicts[0];
+                    answer = `I found ${conflicts.length} unresolved or resolved conflicts. For example, ${c.policy_a} conflicts with ${c.policy_b}.`;
+                    details = `Reasoning: ${c.description || c.voice_explanation || "Conflict detected due to semantic overlap and contradictory mandates."}`;
+                  } else {
+                    answer = "No active conflicts found in the current graph.";
+                  }
+                }
+                else if (q.includes("redundant") || q.includes("duplicate")) {
+                  const red = findings.filter((f: any) => f.finding_type === "REDUNDANT");
+                  if (red.length > 0) {
+                    answer = `I detected ${red.length} redundancies in the policy hierarchy.`;
+                    details = `For example, between ${red[0].policy_a} and ${red[0].policy_b}: ${red[0].description}`;
+                  } else {
+                    answer = "No active redundancies found.";
+                  }
+                }
+                else if (q.includes("threat") || q.includes("mitre") || q.includes("crucible")) {
+                  if (crucible.length > 0) {
+                    answer = `I found ${crucible.length} MITRE ATT&CK coverage gaps in the operative policies.`;
+                    details = `Top gap: ${crucible[0].threat_actor || crucible[0].technique} - ${crucible[0].proposed_remediation}`;
+                  } else {
+                    answer = "No active threat gaps detected by CRUCIBLE.";
+                  }
+                }
+                else {
+                  const hits = findings.filter((f: any) => 
+                    JSON.stringify(f).toLowerCase().includes(q.replace(/[^a-z0-9]/g, ' ').trim().split(' ')[0])
+                  );
+                  if (hits.length > 0) {
+                    answer = `I found ${hits.length} related findings based on your query.`;
+                    details = `Top match involves ${hits[0].policy_a} and ${hits[0].policy_b}: ${hits[0].description}`;
+                  } else {
+                    answer = "I processed your query against the CONCORD graph.";
+                    details = "No specific overlaps or insights were triggered by your parameters. Try asking about 'conflicts', 'staleness', 'overrides', or 'threats'.";
+                  }
+                }
+                sendJson({ answer, details });
+              } catch (e: any) {
+                sendError(500, e.message);
+              }
+            });
+            return;
           }
 
           return next();

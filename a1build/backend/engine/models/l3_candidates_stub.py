@@ -8,27 +8,39 @@ from .l2_lens import pairwise_cosine_matrix
 def generate_candidate_pairs(obligations: list,
                               similarity_threshold: float = config.EMBEDDING_CANDIDATE_THRESHOLD) -> list:
     sim_matrix = pairwise_cosine_matrix(obligations)
-    n = len(obligations)
+    
+    # Group by topic bucket
+    from collections import defaultdict
+    topic_buckets = defaultdict(list)
+    for i, obl in enumerate(obligations):
+        topic_buckets[obl["topic"]].append(i)
+        
     pairs = []
+    
+    # Only evaluate pairs within the same topic bucket
+    for topic, indices in topic_buckets.items():
+        n_bucket = len(indices)
+        for i_idx in range(n_bucket):
+            for j_idx in range(i_idx + 1, n_bucket):
+                i = indices[i_idx]
+                j = indices[j_idx]
+                
+                a, b = obligations[i], obligations[j]
+                if a["policy_file"] == b["policy_file"]:
+                    continue  
 
-    for i, j in combinations(range(n), 2):
-        a, b = obligations[i], obligations[j]
-        if a["policy_file"] == b["policy_file"]:
-            continue  
+                sim = float(sim_matrix[i, j])
 
-        same_topic = a["topic"] == b["topic"]
-        sim = float(sim_matrix[i, j])
-
-        if same_topic or sim >= similarity_threshold:
-            pairs.append({
-                "obligation_a_id": a["id"],
-                "obligation_b_id": b["id"],
-                "policy_a": a["policy_file"],
-                "policy_b": b["policy_file"],
-                "topic": a["topic"] if same_topic else f"{a['topic']}/{b['topic']}",
-                "same_topic": same_topic,
-                "embedding_similarity": round(sim, 4),
-            })
+                if sim >= similarity_threshold:
+                    pairs.append({
+                        "obligation_a_id": a["id"],
+                        "obligation_b_id": b["id"],
+                        "policy_a": a["policy_file"],
+                        "policy_b": b["policy_file"],
+                        "topic": topic,
+                        "same_topic": True,
+                        "embedding_similarity": round(sim, 4),
+                    })
 
     return pairs
 

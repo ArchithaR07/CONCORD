@@ -1,8 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
-
-/* Google Fonts: Sora (display) + Inter (body) */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -96,6 +94,41 @@
 .dark {
   /* Dark theme already set as default, no changes needed */
 }
+
+/* =========================================================
+   LIGHT THEME — Full CSS variable overrides
+   Applied by toggling class="light" on <html> element
+   ========================================================= */
+.light {
+  --background: oklch(0.94 0.006 240);        /* Soft blue-grey page background */
+  --foreground: oklch(0.15 0.015 260);         /* Deep charcoal text */
+  --card: oklch(0.97 0.004 240);               /* Slightly lighter grey for cards */
+  --card-foreground: oklch(0.15 0.015 260);
+  --popover: oklch(0.97 0.004 240);
+  --popover-foreground: oklch(0.15 0.015 260);
+  --primary: oklch(0.55 0.16 200);             /* Cyan accent */
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.90 0.008 240);          /* Medium grey for secondary surfaces */
+  --secondary-foreground: oklch(0.25 0.015 260);
+  --muted: oklch(0.91 0.007 240);              /* Muted grey for inner panels */
+  --muted-foreground: oklch(0.45 0.012 260);   /* Clear readable muted text */
+  --accent: oklch(0.55 0.16 200);
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.55 0.22 30);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.84 0.010 240);             /* Visible grey border */
+  --input: oklch(0.93 0.006 240);              /* Input field slightly distinct from bg */
+  --ring: oklch(0.55 0.16 200);
+  --sidebar: oklch(0.92 0.007 240);
+  --sidebar-foreground: oklch(0.15 0.015 260);
+  --sidebar-primary: oklch(0.55 0.16 200);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.55 0.16 200);
+  --sidebar-accent-foreground: oklch(0.99 0 0);
+  --sidebar-border: oklch(0.84 0.010 240);
+  --sidebar-ring: oklch(0.55 0.16 200);
+}
+
 
 @layer base {
   * {
@@ -205,4 +238,77 @@
       max-width: 1280px;
     }
   }
-}
+
+  /* Custom scrollbar — dark */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.30 0.02 280);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.40 0.02 280);
+  }
+
+  /* Custom scrollbar — light override */
+  .light ::-webkit-scrollbar-thumb {
+    background: oklch(0.78 0.010 240);
+  }
+  .light ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.68 0.012 240);
+  }
+
+  /* Tab content transition — triggered by key change in Home.tsx */
+  .animate-in {
+    animation-fill-mode: both;
+  }
+
+  /* Shimmer skeleton animation */
+  @keyframes shimmer {
+    0% { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+  }
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, var(--muted) 25%, oklch(from var(--muted) l c h / 0.6) 50%, var(--muted) 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+
+  /* Fade-in animation for startup logs */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Light theme — soften harsh box shadows to use grey instead of black */
+  .light .shadow-sm,
+  .light .shadow,
+  .light .shadow-md,
+  .light .shadow-lg,
+  .light .shadow-xl {
+    --tw-shadow-color: oklch(0.75 0.01 240 / 0.25);
+  }
+
+  /* Light theme — force kbd element to be readable */
+  .light kbd {
+    background: oklch(0.90 0.008 240);
+    color: oklch(0.25 0.015 260);
+    border-color: oklch(0.80 0.010 240);
+  }
+
+  /* scrollbar-none utility */
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

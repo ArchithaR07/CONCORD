@@ -253,9 +253,14 @@ def run_on_candidate_pairs(obligations_by_id: dict, candidate_pairs: list, save:
     llm_client = get_llm_client()
     verdicts = []
     for pair in candidate_pairs:
-        a = obligations_by_id[pair["obligation_a_id"]]
-        b = obligations_by_id[pair["obligation_b_id"]]
-        verdicts.append(classify_pair(a, b, llm_client))
+        # A2's filter outputs obligation_id_1 and obligation_id_2
+        a_id = pair.get("obligation_id_1") or pair.get("obligation_a_id")
+        b_id = pair.get("obligation_id_2") or pair.get("obligation_b_id")
+        a = obligations_by_id[a_id]
+        b = obligations_by_id[b_id]
+        verdict = classify_pair(a, b, llm_client)
+        verdict["pair_id"] = pair.get("pair_id")
+        verdicts.append(verdict)
 
     if save:
         out_path = config.OUTPUTS_DIR / "llm_verdicts.json"

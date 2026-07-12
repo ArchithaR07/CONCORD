@@ -67,12 +67,12 @@ def _match_label(pair_policy_a: str, pair_policy_b: str, pair_topic: str,
 
     return 0, "unmatched_implicit_negative"
 def build_feature_table(candidate_pairs: list, rule_verdicts: list, llm_verdicts: list) -> pd.DataFrame:
-    rule_by_pair = {(v["obligation_a_id"], v["obligation_b_id"]): v for v in rule_verdicts}
-    llm_by_pair = {(v["obligation_a_id"], v["obligation_b_id"]): v for v in llm_verdicts}
+    rule_by_pair = {v.get("pair_id"): v for v in rule_verdicts if v.get("pair_id")}
+    llm_by_pair = {v.get("pair_id"): v for v in llm_verdicts if v.get("pair_id")}
 
     rows = []
     for cp in candidate_pairs:
-        key = (cp["obligation_a_id"], cp["obligation_b_id"])
+        key = cp.get("pair_id")
         rule_v = rule_by_pair.get(key, {})
         llm_v = llm_by_pair.get(key, {})
 
@@ -83,11 +83,12 @@ def build_feature_table(candidate_pairs: list, rule_verdicts: list, llm_verdicts
                                    and rule_v["verdict"] == llm_v["verdict"]) else 0.0
 
         rows.append({
-            "obligation_a_id": cp["obligation_a_id"],
-            "obligation_b_id": cp["obligation_b_id"],
-            "policy_a": cp["policy_a"],
-            "policy_b": cp["policy_b"],
-            "topic": cp["topic"],
+            "pair_id": key,
+            "obligation_a_id": cp.get("obligation_id_1") or cp.get("obligation_a_id"),
+            "obligation_b_id": cp.get("obligation_id_2") or cp.get("obligation_b_id"),
+            "policy_a": cp.get("policy_a", ""),
+            "policy_b": cp.get("policy_b", ""),
+            "topic": cp.get("topic"),
             "rule_signal": rule_signal,
             "embedding_similarity": embedding_similarity,
             "llm_confidence": llm_confidence,
@@ -294,7 +295,7 @@ def run(save: bool = True) -> pd.DataFrame:
         )
 
         out_records = scored_df[[
-            "obligation_a_id", "obligation_b_id", "policy_a", "policy_b", "topic",
+            "pair_id", "obligation_a_id", "obligation_b_id", "policy_a", "policy_b", "topic",
             "rule_signal", "embedding_similarity", "llm_confidence", "agreement_bonus",
             "trust_score", "confidence_tier", "rule_verdict", "llm_verdict",
             "is_finding", "label_source",
@@ -310,7 +311,7 @@ def run(save: bool = True) -> pd.DataFrame:
               f"LOW={sum(scored_df.confidence_tier=='LOW')}")
         print(f"[L5] {sensitivity_note(fit_result)}")
 
-    return scored_df
+    return out_records
 
 
 if __name__ == "__main__":

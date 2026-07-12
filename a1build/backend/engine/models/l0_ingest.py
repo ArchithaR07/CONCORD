@@ -81,13 +81,15 @@ def ingest_all(policies_dir: Optional[Path] = None) -> list:
     meta_lookup = _load_metadata_lookup()
 
     md_files = sorted(policies_dir.glob("*.md"))
-    if not md_files:
+    txt_files = sorted(policies_dir.glob("*.txt"))
+    all_files = md_files + txt_files
+    if not all_files:
         raise FileNotFoundError(
-            f"No policy_*.md files found in {policies_dir}. "
+            f"No policy_*.md or .txt files found in {policies_dir}. "
             f"Drop the 30 sample policies there first."
         )
 
-    parsed = [_parse_single_policy(p, meta_lookup) for p in md_files]
+    parsed = [_parse_single_policy(p, meta_lookup) for p in all_files]
     return parsed
 
 
