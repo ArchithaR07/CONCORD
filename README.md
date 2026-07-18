@@ -6,7 +6,7 @@ CONCORD is an advanced, multi-stage engine for ingesting, analyzing, resolving, 
 
 ---
 
-## 🏗️ Architecture (The 16 Layers)
+##  Architecture (The 16 Layers)
 
 The system runs a sophisticated pipeline (L0 through L16) in a single pass:
 
@@ -24,7 +24,7 @@ The system runs a sophisticated pipeline (L0 through L16) in a single pass:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 The project has been fully unified into two core directories:
 
@@ -47,7 +47,7 @@ CONCORD/
 
 ---
 
-## 🚀 Quickstart
+##  Quickstart
 
 ### 1. Run the Backend Pipeline
 
@@ -92,10 +92,10 @@ npm run dev
 
 ---
 
-## 🛠️ Configuration
+## Configuration
 
 Key algorithmic thresholds (similarity thresholds, graph alpha tuners, centrality cutoffs) can be tuned in:
 `a1build/backend/engine/models/config.py`
 
-## 🧹 Legacy Notes
+##  Legacy Notes
 The legacy `concord-a2` logic has been completely absorbed into `a1build`. Legacy testing scripts (like ground-truth validation) are available in `a1build/scripts/`.
